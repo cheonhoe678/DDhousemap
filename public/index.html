@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HUG 든든전세주택을 면적, 보증금, 경쟁률과 함께 지도에서 비교합니다." />
+  <title>든든전세 한눈에</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#listingList">매물 목록으로 바로가기</a>
+  <main class="app-shell">
+    <section class="map-panel" aria-label="든든전세 지도">
+      <div id="map"></div>
+      <div id="regionSummary" class="region-summary" aria-label="지역별 주택 수"></div>
+      <div class="map-legend"><span><i class="marker-sample"></i>확대하면 보증금 표시</span><span>OpenStreetMap</span></div>
+      <button id="fitButton" class="fit-button" type="button">전국 보기</button>
+    </section>
+
+    <aside class="sidebar" aria-label="주택 검색과 목록">
+      <header class="brand">
+        <div>
+          <p class="eyebrow">2026 수시모집 · 300호</p>
+          <h1>든든전세 <span>지도</span></h1>
+        </div>
+        <button id="refreshButton" class="refresh-button" type="button" title="HUG 원문에서 다시 가져오기" aria-label="데이터 새로고침">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6v5h-5M4 18v-5h5M18.5 9A7 7 0 0 0 6.4 6.4L4 11m16 2-2.4 4.6A7 7 0 0 1 5.5 15"/></svg>
+        </button>
+      </header>
+
+      <section class="deadline" aria-label="청약 마감 안내">
+        <span class="deadline-dot"></span>
+        <div><small>청약 마감</small><strong>8월 7일 금요일 · 17:00</strong></div>
+        <span id="countdown" class="countdown"></span>
+      </section>
+
+      <section class="filters" aria-label="주택 필터">
+        <label class="search-box">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
+          <input id="searchInput" type="search" placeholder="동네, 건물명, 주소 검색" autocomplete="off" />
+        </label>
+        <div class="filter-row">
+          <label><span>지역</span><select id="cityFilter"><option value="">전체 지역</option></select></label>
+          <label><span>시·군·구</span><select id="districtFilter"><option value="">전체 시·군·구</option></select></label>
+          <label><span>면적</span><select id="areaFilter"><option value="">전체 평수</option><option value="0-10">10평 미만</option><option value="10-15">10–15평</option><option value="15-20">15–20평</option><option value="20-99">20평 이상</option></select></label>
+          <label><span>보증금</span><select id="depositFilter"><option value="">전체 금액</option><option value="0-100000000">1억 미만</option><option value="100000000-150000000">1–1.5억</option><option value="150000000-200000000">1.5–2억</option><option value="200000000-999999999">2억 이상</option></select></label>
+        </div>
+        <div class="sort-row">
+          <p><strong id="resultCount">0</strong>호가 조건에 맞아요</p>
+          <select id="sortSelect" aria-label="정렬 기준"><option value="applicants">신청 적은 순</option><option value="areaDesc">넓은 순</option><option value="depositAsc">보증금 낮은 순</option><option value="ratio">평당 보증금 낮은 순</option></select>
+        </div>
+      </section>
+
+      <section id="listingList" class="listing-list" aria-live="polite"></section>
+      <footer class="source-note"><span id="updatedAt">불러오는 중…</span><a id="sourceLink" target="_blank" rel="noreferrer">HUG 원문 ↗</a></footer>
+    </aside>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <nav class="mobile-tabs" aria-label="화면 전환">
+    <button class="active" data-view="list" type="button">목록</button>
+    <button data-view="map" type="button">지도</button>
+  </nav>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
