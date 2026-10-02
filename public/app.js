@@ -1,13 +1,19 @@
 const state = { all: [], filtered: [], markers: new Map(), activeKey: null, favorites: new Set(JSON.parse(localStorage.getItem('hug-favorites') || '[]')) };
 const $ = (selector) => document.querySelector(selector);
 const isStaticDeployment = location.hostname.endsWith('github.io') || location.hostname.endsWith('pages.dev');
-const map = L.map('map', { zoomControl: false, minZoom: 7 }).setView([37.42, 126.82], 11);
-L.control.zoom({ position: 'topright' }).addTo(map);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
-const markerLayer = L.layerGroup().addTo(map);
+const map = new naver.maps.Map('map', {
+  center: new naver.maps.LatLng(37.42, 126.82),
+  zoom: 11,
+  minZoom: 7,
+  zoomControl: true,
+  zoomControlOptions: { position: naver.maps.Position.RIGHT_CENTER },
+});
+const infoWindow = new naver.maps.InfoWindow({
+  borderWidth: 0,
+  backgroundColor: 'transparent',
+  anchorSize: new naver.maps.Size(12, 12),
+  pixelOffset: new naver.maps.Point(0, -8),
+});
 
 const won = (value) => {
   const eok = value / 100_000_000;
@@ -21,51 +27,56 @@ const itemKey = (item) => `${item.round}-${item.id}`;
 
 function iconFor(item, active = false) {
   if (map.getZoom() <= 10 && !active) {
-    return L.divIcon({ className: '', html: '<div class="map-dot"></div>', iconSize: [10, 10], iconAnchor: [5, 5] });
+    return { content: '<div class="map-dot"></div>', size: new naver.maps.Size(10, 10), anchor: new naver.maps.Point(5, 5) };
   }
-  return L.divIcon({
-    className: '',
-    html: `<div class="price-marker${active ? ' active' : ''}"><span>${markerLabel(item.depositWon)}</span></div>`,
-    iconSize: [62, 32], iconAnchor: [10, 30], popupAnchor: [20, -28],
-  });
+  return {
+    content: `<div class="price-marker${active ? ' active' : ''}"><span>${markerLabel(item.depositWon)}</span></div>`,
+    size: new naver.maps.Size(62, 32),
+    anchor: new naver.maps.Point(10, 30),
+  };
 }
 
 function popupFor(item) {
-  return `<h3 class="popup-title">${escapeHtml(getName(item))} ${escapeHtml(item.unit || '')}</h3>
+  return `<div class="naver-popup"><h3 class="popup-title">${escapeHtml(getName(item))} ${escapeHtml(item.unit || '')}</h3>
     <p class="popup-address">${escapeHtml(item.address)}</p>
     <div class="popup-facts"><b>${item.areaPyeong}평</b><span>${item.areaM2}㎡</span><span>${won(item.depositWon)}</span><span>신청 ${item.applicants}명</span></div>
-    <a class="popup-link" href="${item.detailUrl}" target="_blank" rel="noreferrer">HUG 상세에서 신청하기 ↗</a>`;
+    <a class="popup-link" href="${item.detailUrl}" target="_blank" rel="noreferrer">HUG 상세에서 신청하기 ↗</a></div>`;
 }
 
 function selectListing(item, pan = true) {
   const key = itemKey(item);
   state.activeKey = key;
   document.querySelectorAll('.listing-card').forEach((card) => card.classList.toggle('active', card.dataset.key === key));
-  for (const [markerKey, marker] of state.markers) marker.setIcon(iconFor(marker.options.item, markerKey === key));
+  for (const [markerKey, marker] of state.markers) marker.setIcon(iconFor(marker.item, markerKey === key));
   const marker = state.markers.get(key);
   if (marker) {
-    if (pan) map.setView(marker.getLatLng(), Math.max(map.getZoom(), 15), { animate: true });
-    marker.openPopup();
+    if (pan) {
+      map.panTo(marker.getPosition());
+      if (map.getZoom() < 15) map.setZoom(15);
+    }
+    infoWindow.setContent(popupFor(item));
+    infoWindow.open(map, marker);
   }
 }
 
 function renderMarkers() {
-  markerLayer.clearLayers();
+  for (const marker of state.markers.values()) marker.setMap(null);
   state.markers.clear();
   state.filtered.filter((item) => item.lat && item.lng).forEach((item) => {
     const key = itemKey(item);
-    const marker = L.marker([item.lat, item.lng], { icon: iconFor(item), item }).bindPopup(popupFor(item));
-    marker.on('click', () => {
-      state.activeKey = key;
-      document.querySelectorAll('.listing-card').forEach((card) => card.classList.toggle('active', card.dataset.key === key));
+    const marker = new naver.maps.Marker({
+      map,
+      position: new naver.maps.LatLng(item.lat, item.lng),
+      icon: iconFor(item),
     });
-    marker.addTo(markerLayer);
+    marker.item = item;
+    naver.maps.Event.addListener(marker, 'click', () => selectListing(item, false));
     state.markers.set(key, marker);
   });
 }
 
 function refreshMarkerIcons() {
-  for (const [key, marker] of state.markers) marker.setIcon(iconFor(marker.options.item, key === state.activeKey));
+  for (const [key, marker] of state.markers) marker.setIcon(iconFor(marker.item, key === state.activeKey));
 }
 
 function renderList() {
@@ -85,7 +96,7 @@ function renderList() {
     if (innerWidth <= 760) {
       document.body.classList.add('map-view');
       document.querySelectorAll('.mobile-tabs button').forEach((button) => button.classList.toggle('active', button.dataset.view === 'map'));
-      setTimeout(() => map.invalidateSize(), 20);
+      setTimeout(() => map.refresh(), 20);
     }
   }));
 }
@@ -138,8 +149,11 @@ function showToast(message) {
 }
 
 function fitMarkers() {
-  const points = state.filtered.filter((item) => item.lat && item.lng).map((item) => [item.lat, item.lng]);
-  if (points.length) map.fitBounds(points, { padding: [45, 45], maxZoom: 15 });
+  const points = state.filtered.filter((item) => item.lat && item.lng);
+  if (!points.length) return;
+  const bounds = new naver.maps.LatLngBounds();
+  points.forEach((item) => bounds.extend(new naver.maps.LatLng(item.lat, item.lng)));
+  map.fitBounds(bounds, { top: 45, right: 45, bottom: 45, left: 45 });
 }
 
 async function loadData() {
@@ -167,7 +181,7 @@ async function loadData() {
 });
 $('#cityFilter').addEventListener('change', () => { updateDistrictOptions(); applyFilters(); });
 $('#fitButton').addEventListener('click', fitMarkers);
-map.on('zoomend', refreshMarkerIcons);
+naver.maps.Event.addListener(map, 'zoom_changed', refreshMarkerIcons);
 if (isStaticDeployment) {
   $('#refreshButton').hidden = true;
   $('#refreshButton').setAttribute('aria-hidden', 'true');
@@ -193,7 +207,7 @@ $('#refreshButton').addEventListener('click', async () => {
 document.querySelectorAll('.mobile-tabs button').forEach((button) => button.addEventListener('click', () => {
   document.body.classList.toggle('map-view', button.dataset.view === 'map');
   document.querySelectorAll('.mobile-tabs button').forEach((item) => item.classList.toggle('active', item === button));
-  if (button.dataset.view === 'map') setTimeout(() => map.invalidateSize(), 20);
+  if (button.dataset.view === 'map') setTimeout(() => map.refresh(), 20);
 }));
 
 $('#listingList').innerHTML = '<div class="empty">HUG 주택 목록을 정리하고 있습니다.</div>';

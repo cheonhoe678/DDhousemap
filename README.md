@@ -2,7 +2,7 @@
 
 HUG 든든전세의 주소·전용면적·보증금·신청자 수와 KB부동산의 공개 지도 좌표를 결합해 비교하는 로컬 웹앱입니다. 모집 차수, 지역, 시·군·구, 평수, 보증금으로 주택을 걸러보고 HUG 상세 신청 페이지로 이동할 수 있습니다.
 
-별도의 지도 API 키는 필요하지 않습니다.
+지도 표시에는 네이버 Maps JavaScript API Client ID가 사용됩니다.
 
 ## 실행에 필요한 환경
 
@@ -12,7 +12,7 @@ HUG 든든전세의 주소·전용면적·보증금·신청자 수와 KB부동�
 - Chrome, Edge 등 최신 웹 브라우저
 - 인터넷 연결
   - 첫 실행 시 npm 패키지 설치
-  - OpenStreetMap 지도 타일 표시
+  - 네이버 지도 표시
   - HUG·KB 최신 데이터 갱신 시 필요
 
 Git은 실행에 필요하지 않습니다. GitHub에서 ZIP 파일로 내려받아도 실행할 수 있습니다.
@@ -54,8 +54,7 @@ npm run refresh
 | 수집 | Node.js Fetch API | HUG 목록과 KB 공개 지도 응답 요청 |
 | HTML 분석 | Cheerio | HUG HTML 표에서 주택 정보 추출 |
 | 프런트엔드 | HTML, CSS, Vanilla JavaScript | 검색, 필터, 정렬, 반응형 UI |
-| 지도 | Leaflet 1.9.4 | 지도와 주택 마커 렌더링 |
-| 지도 타일 | OpenStreetMap | 배경 지도 제공 |
+| 지도 | 네이버 Maps JavaScript API v3 | 배경 지도와 주택 마커 렌더링 |
 | 데이터 저장 | JSON | 차수별로 수집한 주택과 좌표를 `public/data.json`에 보관 |
 
 React나 별도의 데이터베이스는 사용하지 않습니다.
@@ -107,6 +106,6 @@ preview*.png
 
 - 주택 정보: HUG 안심전세포털 `모집공고 및 입주신청`
 - 좌표: KB부동산 `HUG 든든전세주택` 공개 지도 데이터
-- 배경 지도: OpenStreetMap
+- 배경 지도: 네이버 지도
 
 공식 신청 전에는 반드시 HUG 상세 페이지와 등기부등본·건축물대장을 다시 확인하세요.

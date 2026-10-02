@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -18,7 +17,7 @@
     <section class="map-panel" aria-label="든든전세 지도">
       <div id="map"></div>
       <div id="regionSummary" class="region-summary" aria-label="지역별 주택 수"></div>
-      <div class="map-legend"><span><i class="marker-sample"></i>확대하면 보증금 표시</span><span>OpenStreetMap</span></div>
+      <div class="map-legend"><span><i class="marker-sample"></i>확대하면 보증금 표시</span><span>NAVER 지도</span></div>
       <button id="fitButton" class="fit-button" type="button">전국 보기</button>
     </section>
 
@@ -68,7 +67,7 @@
     <button data-view="map" type="button">지도</button>
   </nav>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=efr8q6hlhb"></script>
   <script src="./app.js" type="module"></script>
 </body>
 </html>
