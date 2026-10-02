@@ -25,7 +25,7 @@
     <aside class="sidebar" aria-label="주택 검색과 목록">
       <header class="brand">
         <div>
-          <p class="eyebrow">2026 수시모집 · 300호</p>
+          <p id="roundSummary" class="eyebrow">2026 든든전세 모집</p>
           <h1>든든전세 <span>지도</span></h1>
         </div>
         <button id="refreshButton" class="refresh-button" type="button" title="HUG 원문에서 다시 가져오기" aria-label="데이터 새로고침">
@@ -35,7 +35,7 @@
 
       <section class="deadline" aria-label="청약 마감 안내">
         <span class="deadline-dot"></span>
-        <div><small>청약 마감</small><strong>8월 7일 금요일 · 17:00</strong></div>
+        <div><small>청약 일정</small><strong id="applicationPeriod">불러오는 중…</strong></div>
         <span id="countdown" class="countdown"></span>
       </section>
 
@@ -45,6 +45,7 @@
           <input id="searchInput" type="search" placeholder="동네, 건물명, 주소 검색" autocomplete="off" />
         </label>
         <div class="filter-row">
+          <label><span>모집 차수</span><select id="roundFilter"><option value="">전체 차수</option></select></label>
           <label><span>지역</span><select id="cityFilter"><option value="">전체 지역</option></select></label>
           <label><span>시·군·구</span><select id="districtFilter"><option value="">전체 시·군·구</option></select></label>
           <label><span>면적</span><select id="areaFilter"><option value="">전체 평수</option><option value="0-10">10평 미만</option><option value="10-15">10–15평</option><option value="15-20">15–20평</option><option value="20-99">20평 이상</option></select></label>

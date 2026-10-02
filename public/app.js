@@ -1,4 +1,4 @@
-const state = { all: [], filtered: [], markers: new Map(), activeId: null, favorites: new Set(JSON.parse(localStorage.getItem('hug-favorites') || '[]')) };
+const state = { all: [], filtered: [], markers: new Map(), activeKey: null, favorites: new Set(JSON.parse(localStorage.getItem('hug-favorites') || '[]')) };
 const $ = (selector) => document.querySelector(selector);
 const isStaticDeployment = location.hostname.endsWith('github.io') || location.hostname.endsWith('pages.dev');
 const map = L.map('map', { zoomControl: false, minZoom: 7 }).setView([37.42, 126.82], 11);
@@ -17,6 +17,7 @@ const won = (value) => {
 const markerLabel = (value) => value >= 100_000_000 ? `${Number((value / 100_000_000).toFixed(1))}억` : `${Math.round(value / 1_000_000)}백`;
 const escapeHtml = (text = '') => String(text).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 const getName = (item) => item.buildingName || item.address.match(/\s([^\s]+)\s+제?\d+층/)?.[1] || `${item.district} 주택`;
+const itemKey = (item) => `${item.round}-${item.id}`;
 
 function iconFor(item, active = false) {
   if (map.getZoom() <= 10 && !active) {
@@ -37,10 +38,11 @@ function popupFor(item) {
 }
 
 function selectListing(item, pan = true) {
-  state.activeId = item.id;
-  document.querySelectorAll('.listing-card').forEach((card) => card.classList.toggle('active', card.dataset.id === item.id));
-  for (const [id, marker] of state.markers) marker.setIcon(iconFor(marker.options.item, id === item.id));
-  const marker = state.markers.get(item.id);
+  const key = itemKey(item);
+  state.activeKey = key;
+  document.querySelectorAll('.listing-card').forEach((card) => card.classList.toggle('active', card.dataset.key === key));
+  for (const [markerKey, marker] of state.markers) marker.setIcon(iconFor(marker.options.item, markerKey === key));
+  const marker = state.markers.get(key);
   if (marker) {
     if (pan) map.setView(marker.getLatLng(), Math.max(map.getZoom(), 15), { animate: true });
     marker.openPopup();
@@ -51,18 +53,19 @@ function renderMarkers() {
   markerLayer.clearLayers();
   state.markers.clear();
   state.filtered.filter((item) => item.lat && item.lng).forEach((item) => {
+    const key = itemKey(item);
     const marker = L.marker([item.lat, item.lng], { icon: iconFor(item), item }).bindPopup(popupFor(item));
     marker.on('click', () => {
-      state.activeId = item.id;
-      document.querySelectorAll('.listing-card').forEach((card) => card.classList.toggle('active', card.dataset.id === item.id));
+      state.activeKey = key;
+      document.querySelectorAll('.listing-card').forEach((card) => card.classList.toggle('active', card.dataset.key === key));
     });
     marker.addTo(markerLayer);
-    state.markers.set(item.id, marker);
+    state.markers.set(key, marker);
   });
 }
 
 function refreshMarkerIcons() {
-  for (const [id, marker] of state.markers) marker.setIcon(iconFor(marker.options.item, id === state.activeId));
+  for (const [key, marker] of state.markers) marker.setIcon(iconFor(marker.options.item, key === state.activeKey));
 }
 
 function renderList() {
@@ -71,13 +74,13 @@ function renderList() {
     $('#listingList').innerHTML = '<div class="empty">조건에 맞는 집이 없어요.<br>필터를 조금 넓혀보세요.</div>';
     return;
   }
-  $('#listingList').innerHTML = state.filtered.map((item) => `<button class="listing-card${item.id === state.activeId ? ' active' : ''}" data-id="${item.id}" type="button">
-    <div class="card-head"><h2>${escapeHtml(getName(item))} <small>${escapeHtml(item.unit || '')}</small></h2><span class="type-badge">${escapeHtml(item.housingType.replace('(주거용)', ''))}</span></div>
+  $('#listingList').innerHTML = state.filtered.map((item) => `<button class="listing-card${itemKey(item) === state.activeKey ? ' active' : ''}" data-key="${itemKey(item)}" type="button">
+    <div class="card-head"><h2>${escapeHtml(getName(item))} <small>${escapeHtml(item.unit || '')}</small></h2><span><b class="round-badge">${item.round}차</b><span class="type-badge">${escapeHtml(item.housingType.replace('(주거용)', ''))}</span></span></div>
     <p class="address">${escapeHtml(item.address)}</p>
     <div class="facts"><span>전용면적<strong>${item.areaPyeong}평 <small>· ${item.areaM2}㎡</small></strong></span><span>보증금<strong>${won(item.depositWon)}</strong></span><span>현재 신청<strong>${item.applicants}명</strong></span></div>
   </button>`).join('');
   document.querySelectorAll('.listing-card').forEach((card) => card.addEventListener('click', () => {
-    const item = state.filtered.find((entry) => entry.id === card.dataset.id);
+    const item = state.filtered.find((entry) => itemKey(entry) === card.dataset.key);
     selectListing(item);
     if (innerWidth <= 760) {
       document.body.classList.add('map-view');
@@ -87,15 +90,26 @@ function renderList() {
   }));
 }
 
+function updateRoundInfo() {
+  const selectedRound = Number($('#roundFilter').value) || Math.max(...state.all.map((item) => item.round));
+  const item = state.all.find((listing) => listing.round === selectedRound);
+  $('#applicationPeriod').textContent = item?.applicationPeriod || 'HUG 원문에서 확인';
+  const match = item?.applicationPeriod?.match(/~\s*(\d{4})\.(\d{2})\.(\d{2})\.\s*(\d{2}):(\d{2})/);
+  const deadline = match && new Date(`${match[1]}-${match[2]}-${match[3]}T${match[4]}:${match[5]}:00+09:00`);
+  const days = deadline ? Math.ceil((deadline - new Date()) / 86_400_000) : null;
+  $('#countdown').textContent = days === null ? '' : days > 0 ? `D-${days}` : days === 0 ? '오늘 마감' : '접수 마감';
+}
+
 function applyFilters() {
   const query = $('#searchInput').value.trim().toLowerCase();
+  const round = Number($('#roundFilter').value);
   const city = $('#cityFilter').value;
   const district = $('#districtFilter').value;
   const [areaMin, areaMax] = ($('#areaFilter').value || '0-Infinity').split('-').map(Number);
   const [depositMin, depositMax] = ($('#depositFilter').value || '0-Infinity').split('-').map(Number);
   state.filtered = state.all.filter((item) => {
     const haystack = `${item.city} ${item.district} ${item.address} ${item.buildingName || ''}`.toLowerCase();
-    return (!query || haystack.includes(query)) && (!city || item.city === city) && (!district || item.district === district)
+    return (!query || haystack.includes(query)) && (!round || item.round === round) && (!city || item.city === city) && (!district || item.district === district)
       && item.areaPyeong >= areaMin && item.areaPyeong < areaMax
       && item.depositWon >= depositMin && item.depositWon < depositMax;
   });
@@ -104,6 +118,7 @@ function applyFilters() {
     : sort === 'depositAsc' ? a.depositWon - b.depositWon
       : sort === 'ratio' ? (a.depositWon / a.areaM2) - (b.depositWon / b.areaM2)
         : a.applicants - b.applicants);
+  updateRoundInfo();
   renderList();
   renderMarkers();
 }
@@ -131,19 +146,23 @@ async function loadData() {
   const response = await fetch(`./data.json?v=${Date.now()}`);
   if (!response.ok) throw new Error('data.json을 불러오지 못했습니다.');
   const data = await response.json();
-  state.all = data.listings;
+  state.all = data.listings.map((item) => ({ ...item, round: Number(item.round) || 11 }));
+  const rounds = [...new Set(state.all.map((item) => item.round))].sort((a, b) => b - a);
+  $('#roundFilter').innerHTML += rounds.map((round) => `<option value="${round}">${round}차</option>`).join('');
+  $('#roundFilter').value = String(rounds[0]);
   const cities = [...new Set(state.all.map((item) => item.city))].sort();
   $('#cityFilter').innerHTML += cities.map((city) => `<option>${escapeHtml(city)}</option>`).join('');
   updateDistrictOptions();
   const shortCity = (city) => city.replace('특별시', '').replace('광역시', '').replace('도', '');
   $('#regionSummary').innerHTML = cities.map((city) => `<span class="region-stat">${escapeHtml(shortCity(city))}<strong>${state.all.filter((item) => item.city === city).length}</strong></span>`).join('');
+  $('#roundSummary').textContent = `2026 든든전세 · ${rounds.map((round) => `${round}차`).join(' · ')}`;
   $('#updatedAt').textContent = `${new Date(data.meta.fetchedAt).toLocaleString('ko-KR')} 기준 · 좌표 ${data.meta.located}/${data.meta.total}`;
   $('#sourceLink').href = data.meta.source;
   applyFilters();
   fitMarkers();
 }
 
-['searchInput', 'districtFilter', 'areaFilter', 'depositFilter', 'sortSelect'].forEach((id) => {
+['searchInput', 'roundFilter', 'districtFilter', 'areaFilter', 'depositFilter', 'sortSelect'].forEach((id) => {
   $(`#${id}`).addEventListener(id === 'searchInput' ? 'input' : 'change', applyFilters);
 });
 $('#cityFilter').addEventListener('change', () => { updateDistrictOptions(); applyFilters(); });
@@ -176,10 +195,6 @@ document.querySelectorAll('.mobile-tabs button').forEach((button) => button.addE
   document.querySelectorAll('.mobile-tabs button').forEach((item) => item.classList.toggle('active', item === button));
   if (button.dataset.view === 'map') setTimeout(() => map.invalidateSize(), 20);
 }));
-
-const deadline = new Date('2026-08-07T17:00:00+09:00');
-const days = Math.ceil((deadline - new Date()) / 86_400_000);
-$('#countdown').textContent = days > 0 ? `D-${days}` : days === 0 ? '오늘 마감' : '접수 마감';
 
 $('#listingList').innerHTML = '<div class="empty">HUG 주택 목록을 정리하고 있습니다.</div>';
 loadData().catch((error) => { $('#listingList').innerHTML = `<div class="empty">${escapeHtml(error.message)}<br>터미널에서 npm run refresh를 실행해주세요.</div>`; });

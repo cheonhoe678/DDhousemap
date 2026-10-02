@@ -73,6 +73,7 @@ select:hover { border-color: #aab5c2; background-color: #fafbfd; }
 .card-head h2 { overflow: hidden; margin: 0; font-size: .88rem; font-weight: 700; letter-spacing: -.035em; text-overflow: ellipsis; white-space: nowrap; }
 .card-head h2 small { font-weight: 500; }
 .type-badge { flex: none; color: #788291; font-size: .56rem; font-weight: 600; }
+.round-badge { margin-right: .3rem; padding: .18rem .38rem; border-radius: 999px; color: white; background: var(--accent); font-size: .52rem; }
 .address { overflow: hidden; margin: .32rem 0 .8rem; color: var(--muted); font-size: .62rem; text-overflow: ellipsis; white-space: nowrap; }
 .facts { display: grid; grid-template-columns: 1.15fr .85fr .7fr; gap: .6rem; }
 .facts span { display: flex; flex-direction: column; color: #8a94a1; font-size: .54rem; }
