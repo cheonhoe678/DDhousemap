@@ -76,19 +76,24 @@ async function getHugPage(page) {
   return { total, noticeUrl, rows };
 }
 
-export async function getCurrentNotice() {
+export async function getCurrentNotice({ allowPartial = false } = {}) {
   const first = await getHugPage(1);
   if (!first.total) throw new Error('HUG에서 현재 공고 주택을 찾지 못했습니다.');
   const pageCount = Math.ceil(first.total / 10);
   console.log(`HUG 최신 공고 ${first.total}건(${pageCount}페이지) 확인`);
   const pages = [first];
   for (let page = 2; page <= pageCount; page += 5) {
-    pages.push(...await Promise.all(Array.from(
+    const batch = await Promise.all(Array.from(
       { length: Math.min(5, pageCount - page + 1) },
-      (_, index) => getHugPage(page + index),
-    )));
+      (_, index) => getHugPage(page + index).catch((error) => {
+        if (!allowPartial) throw error;
+        console.warn(`${page + index}페이지 확인 실패, 기존 지원자 수 유지: ${error.message}`);
+        return null;
+      }),
+    ));
+    pages.push(...batch.filter(Boolean));
   }
-  return { first, listings: pages.flatMap((page) => page.rows) };
+  return { first, listings: pages.flatMap((page) => page.rows), fetchedPages: pages.length, pageCount };
 }
 
 export function applicationDeadline(period) {

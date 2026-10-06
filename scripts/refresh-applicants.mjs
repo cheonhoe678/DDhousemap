@@ -16,12 +16,15 @@ if (Date.now() > deadline.getTime()) {
   process.exit(0);
 }
 
-const { first, listings } = await getCurrentNotice();
+const { first, listings, fetchedPages, pageCount } = await getCurrentNotice({ allowPartial: true });
 if (listings[0]?.noticeDate !== savedLatest[0]?.noticeDate) {
   throw new Error('새 모집 차수가 발견됐습니다. npm run refresh로 전체 데이터를 먼저 갱신해주세요.');
 }
 
 const applicantById = new Map(listings.map((item) => [item.id, item.applicants]));
+if (applicantById.size < savedLatest.length * 0.8) {
+  throw new Error(`지원자 수 확인 범위가 너무 작습니다: ${applicantById.size}/${savedLatest.length}`);
+}
 let changed = 0;
 for (const item of savedLatest) {
   const applicants = applicantById.get(item.id);
@@ -33,6 +36,7 @@ for (const item of savedLatest) {
 const checkedAt = new Date().toISOString();
 data.meta.fetchedAt = checkedAt;
 data.meta.applicantsFetchedAt = checkedAt;
+data.meta.applicantsChecked = applicantById.size;
 data.meta.noticeUrl = first.noticeUrl;
 await writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
-console.log(`${latestRound}차 지원자 수 확인 완료: ${changed}호 변경`);
+console.log(`${latestRound}차 지원자 수 확인 완료: ${changed}호 변경, ${applicantById.size}/${savedLatest.length}호 확인 (${fetchedPages}/${pageCount}페이지)`);

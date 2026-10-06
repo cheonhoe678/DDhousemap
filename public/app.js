@@ -170,7 +170,9 @@ async function loadData() {
   const shortCity = (city) => city.replace('특별시', '').replace('광역시', '').replace('도', '');
   $('#regionSummary').innerHTML = cities.map((city) => `<span class="region-stat">${escapeHtml(shortCity(city))}<strong>${state.all.filter((item) => item.city === city).length}</strong></span>`).join('');
   $('#roundSummary').textContent = `2026 든든전세 · ${rounds.map((round) => `${round}차`).join(' · ')}`;
-  $('#updatedAt').textContent = `${new Date(data.meta.fetchedAt).toLocaleString('ko-KR')} 기준 · 좌표 ${data.meta.located}/${data.meta.total}`;
+  const latestCount = state.all.filter((item) => item.round === rounds[0]).length;
+  const applicantStatus = data.meta.applicantsChecked ? ` · 지원자 ${data.meta.applicantsChecked}/${latestCount}` : '';
+  $('#updatedAt').textContent = `${new Date(data.meta.fetchedAt).toLocaleString('ko-KR')} 기준${applicantStatus} · 좌표 ${data.meta.located}/${data.meta.total}`;
   $('#sourceLink').href = data.meta.source;
   applyFilters();
   fitMarkers();
