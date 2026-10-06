@@ -16,14 +16,19 @@ if (Date.now() > deadline.getTime()) {
   process.exit(0);
 }
 
-const { first, listings, fetchedPages, pageCount } = await getCurrentNotice({ allowPartial: true });
+const pageCount = Math.ceil(savedLatest.length / 10);
+const startPage = Number(data.meta.applicantsNextPage) || 1;
+const requestedPages = Array.from({ length: Math.min(30, pageCount) }, (_, index) => ((startPage - 1 + index) % pageCount) + 1);
+const result = await getCurrentNotice({ allowPartial: true, requestedPages });
+const { first, listings, fetchedPages } = result;
 if (listings[0]?.noticeDate !== savedLatest[0]?.noticeDate) {
   throw new Error('새 모집 차수가 발견됐습니다. npm run refresh로 전체 데이터를 먼저 갱신해주세요.');
 }
 
 const applicantById = new Map(listings.map((item) => [item.id, item.applicants]));
-if (applicantById.size < savedLatest.length * 0.8) {
-  throw new Error(`지원자 수 확인 범위가 너무 작습니다: ${applicantById.size}/${savedLatest.length}`);
+const expected = Math.min(requestedPages.length * 10, savedLatest.length);
+if (applicantById.size < expected * 0.8) {
+  throw new Error(`지원자 수 확인 범위가 너무 작습니다: ${applicantById.size}/${expected}`);
 }
 let changed = 0;
 for (const item of savedLatest) {
@@ -37,6 +42,7 @@ const checkedAt = new Date().toISOString();
 data.meta.fetchedAt = checkedAt;
 data.meta.applicantsFetchedAt = checkedAt;
 data.meta.applicantsChecked = applicantById.size;
+data.meta.applicantsNextPage = (requestedPages.at(-1) % pageCount) + 1;
 data.meta.noticeUrl = first.noticeUrl;
 await writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
-console.log(`${latestRound}차 지원자 수 확인 완료: ${changed}호 변경, ${applicantById.size}/${savedLatest.length}호 확인 (${fetchedPages}/${pageCount}페이지)`);
+console.log(`${latestRound}차 지원자 수 확인 완료: ${changed}호 변경, 이번 실행 ${applicantById.size}/${savedLatest.length}호 확인 (${fetchedPages}페이지)`);

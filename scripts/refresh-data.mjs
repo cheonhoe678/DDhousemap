@@ -76,22 +76,22 @@ async function getHugPage(page, fetchOptions = {}) {
   return { total, noticeUrl, rows };
 }
 
-export async function getCurrentNotice({ allowPartial = false } = {}) {
+export async function getCurrentNotice({ allowPartial = false, requestedPages = null } = {}) {
   const first = await getHugPage(1);
   if (!first.total) throw new Error('HUG에서 현재 공고 주택을 찾지 못했습니다.');
   const pageCount = Math.ceil(first.total / 10);
   console.log(`HUG 최신 공고 ${first.total}건(${pageCount}페이지) 확인`);
   const pages = [first];
-  const batchSize = allowPartial ? 30 : 5;
-  for (let page = 2; page <= pageCount; page += batchSize) {
-    const batch = await Promise.all(Array.from(
-      { length: Math.min(batchSize, pageCount - page + 1) },
-      (_, index) => getHugPage(page + index, allowPartial ? { retries: 0, timeout: 15_000 } : {}).catch((error) => {
+  const targets = requestedPages
+    ? [...new Set(requestedPages)].filter((page) => page > 1 && page <= pageCount)
+    : Array.from({ length: pageCount - 1 }, (_, index) => index + 2);
+  for (let index = 0; index < targets.length; index += 5) {
+    const batch = await Promise.all(targets.slice(index, index + 5).map((page) =>
+      getHugPage(page).catch((error) => {
         if (!allowPartial) throw error;
-        console.warn(`${page + index}페이지 확인 실패, 기존 지원자 수 유지: ${error.message}`);
+        console.warn(`${page}페이지 확인 실패, 기존 지원자 수 유지: ${error.message}`);
         return null;
-      }),
-    ));
+      })));
     pages.push(...batch.filter(Boolean));
   }
   return { first, listings: pages.flatMap((page) => page.rows), fetchedPages: pages.length, pageCount };
