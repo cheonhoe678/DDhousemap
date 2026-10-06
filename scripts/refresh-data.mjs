@@ -69,6 +69,26 @@ async function getHugPage(page) {
   return { total, noticeUrl, rows };
 }
 
+export async function getCurrentNotice() {
+  const first = await getHugPage(1);
+  if (!first.total) throw new Error('HUG에서 현재 공고 주택을 찾지 못했습니다.');
+  const pageCount = Math.ceil(first.total / 10);
+  console.log(`HUG 최신 공고 ${first.total}건(${pageCount}페이지) 확인`);
+  const pages = [first];
+  for (let page = 2; page <= pageCount; page += 10) {
+    pages.push(...await Promise.all(Array.from(
+      { length: Math.min(10, pageCount - page + 1) },
+      (_, index) => getHugPage(page + index),
+    )));
+  }
+  return { first, listings: pages.flatMap((page) => page.rows) };
+}
+
+export function applicationDeadline(period) {
+  const match = period?.match(/~\s*(\d{4})\.(\d{2})\.(\d{2})\.\s*(\d{2}):(\d{2})/);
+  return match ? new Date(`${match[1]}-${match[2]}-${match[3]}T${match[4]}:${match[5]}:00+09:00`) : null;
+}
+
 function tileBounds() {
   const regions = [
     { south: 36.75, north: 38.25, west: 126.15, east: 127.95 },
@@ -140,18 +160,7 @@ async function getKbCoordinates() {
 export async function refreshData() {
   const previous = JSON.parse(await readFile(DATA_FILE, 'utf8').catch(() => '{"listings":[]}'));
   const previousListings = (previous.listings || []).map((item) => ({ ...item, round: Number(item.round) || 11 }));
-  const first = await getHugPage(1);
-  if (!first.total) throw new Error('HUG에서 현재 공고 주택을 찾지 못했습니다.');
-  const pageCount = Math.ceil(first.total / 10);
-  console.log(`HUG 최신 공고 ${first.total}건(${pageCount}페이지) 확인`);
-  const pages = [first];
-  for (let page = 2; page <= pageCount; page += 10) {
-    pages.push(...await Promise.all(Array.from(
-      { length: Math.min(10, pageCount - page + 1) },
-      (_, index) => getHugPage(page + index),
-    )));
-  }
-  const listings = pages.flatMap((page) => page.rows);
+  const { first, listings } = await getCurrentNotice();
   const round = roundFor(listings[0]?.noticeDate, previousListings);
   const coordinates = await getKbCoordinates();
   const oldCoordinates = new Map(previousListings.map((item) => [item.id, {

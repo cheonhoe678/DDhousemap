@@ -1,0 +1,41 @@
+name: Refresh applicant counts
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-applicants
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Refresh applicant counts
+        run: npm run refresh:applicants
+      - name: Commit changed counts
+        run: |
+          if git diff --quiet -- public/data.json; then
+            echo "No data change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data.json
+          git commit -m "Update applicant counts"
+          git pull --rebase origin main
+          git push origin main

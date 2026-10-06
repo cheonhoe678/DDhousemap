@@ -45,6 +45,12 @@ npm run refresh
 
 수집 후 서버가 이미 실행 중이면 브라우저를 새로고침합니다. 화면의 새로고침 버튼으로도 갱신할 수 있으며 약 1분 정도 걸릴 수 있습니다.
 
+GitHub Pages에서는 `.github/workflows/refresh-applicants.yml`이 모집 마감 전까지 10분마다 최신 차수의 지원자 수를 확인합니다. 변경된 데이터는 자동 커밋되며 기존 Pages 배포 작업이 이어서 실행됩니다. 지원자 수만 직접 갱신하려면 다음 명령을 사용합니다.
+
+```powershell
+npm run refresh:applicants
+```
+
 ## 기술 스택
 
 | 구분 | 기술 | 역할 |
