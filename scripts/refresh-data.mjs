@@ -36,13 +36,13 @@ async function fetchText(url, options = {}) {
   }
 }
 
-async function getHugPage(page) {
+async function getHugPage(page, fetchOptions = {}) {
   const params = new URLSearchParams({
     BJAMT: 'ALL', sbGugun: 'ALL', view_Count: 'Y', BJAREA: 'ALL',
     BJORDER: 'ALL', CMB_SIDO: 'ALL', cur_page: String(page),
   });
   // HUG 응답 헤더에는 인코딩이 생략되어 있지만 실제 본문은 CP949 계열이다.
-  const html = await fetchText(`${HUG_LIST}?${params}`, { encoding: 'euc-kr' });
+  const html = await fetchText(`${HUG_LIST}?${params}`, { encoding: 'euc-kr', ...fetchOptions });
   const $ = cheerio.load(html);
   const totalText = clean($('.pageNum .total').text());
   const total = Number(totalText.match(/\d+/)?.[0] || 0);
@@ -82,10 +82,11 @@ export async function getCurrentNotice({ allowPartial = false } = {}) {
   const pageCount = Math.ceil(first.total / 10);
   console.log(`HUG 최신 공고 ${first.total}건(${pageCount}페이지) 확인`);
   const pages = [first];
-  for (let page = 2; page <= pageCount; page += 5) {
+  const batchSize = allowPartial ? 30 : 5;
+  for (let page = 2; page <= pageCount; page += batchSize) {
     const batch = await Promise.all(Array.from(
-      { length: Math.min(5, pageCount - page + 1) },
-      (_, index) => getHugPage(page + index).catch((error) => {
+      { length: Math.min(batchSize, pageCount - page + 1) },
+      (_, index) => getHugPage(page + index, allowPartial ? { retries: 0, timeout: 15_000 } : {}).catch((error) => {
         if (!allowPartial) throw error;
         console.warn(`${page + index}페이지 확인 실패, 기존 지원자 수 유지: ${error.message}`);
         return null;
