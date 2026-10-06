@@ -51,6 +51,8 @@ GitHub Pages에서는 `.github/workflows/refresh-applicants.yml`이 모집 마�
 npm run refresh:applicants
 ```
 
+전기차 충전소 정보는 네이버 지역 검색 API로 건물 반경 300m를 확인합니다. GitHub Actions 저장소 비밀값 `NAVER_SEARCH_CLIENT_ID`, `NAVER_SEARCH_CLIENT_SECRET`을 등록하면 `Refresh EV chargers` 작업이 매주 자동 갱신하며, 수동 실행도 가능합니다.
+
 ## 기술 스택
 
 | 구분 | 기술 | 역할 |

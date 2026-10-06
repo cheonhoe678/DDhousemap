@@ -27,20 +27,23 @@ const itemKey = (item) => `${item.round}-${item.id}`;
 
 function iconFor(item, active = false) {
   if (map.getZoom() <= 10 && !active) {
-    return { content: '<div class="map-dot"></div>', size: new naver.maps.Size(10, 10), anchor: new naver.maps.Point(5, 5) };
+    return { content: `<div class="map-dot${item.evCharger ? ' has-charger' : ''}"></div>`, size: new naver.maps.Size(10, 10), anchor: new naver.maps.Point(5, 5) };
   }
   return {
-    content: `<div class="price-marker${active ? ' active' : ''}"><span>${markerLabel(item.depositWon)}</span></div>`,
+    content: `<div class="price-marker${active ? ' active' : ''}${item.evCharger ? ' has-charger' : ''}"><span>${markerLabel(item.depositWon)}</span></div>`,
     size: new naver.maps.Size(62, 32),
     anchor: new naver.maps.Point(10, 30),
   };
 }
 
 function popupFor(item) {
+  const charger = item.evCharger
+    ? `<a class="charger-link" href="${escapeHtml(item.evCharger.mapUrl)}" target="_blank" rel="noreferrer">⚡ ${escapeHtml(item.evCharger.name)} · ${item.evCharger.distanceM}m</a>`
+    : '';
   return `<div class="naver-popup"><h3 class="popup-title">${escapeHtml(getName(item))} ${escapeHtml(item.unit || '')}</h3>
     <p class="popup-address">${escapeHtml(item.address)}</p>
     <div class="popup-facts"><b>${item.areaPyeong}평</b><span>${item.areaM2}㎡</span><span>${won(item.depositWon)}</span><span>신청 ${item.applicants}명</span></div>
-    <a class="popup-link" href="${item.detailUrl}" target="_blank" rel="noreferrer">HUG 상세에서 신청하기 ↗</a></div>`;
+    ${charger}<a class="popup-link" href="${item.detailUrl}" target="_blank" rel="noreferrer">HUG 상세에서 신청하기 ↗</a></div>`;
 }
 
 function selectListing(item, pan = true) {
@@ -86,7 +89,7 @@ function renderList() {
     return;
   }
   $('#listingList').innerHTML = state.filtered.map((item) => `<button class="listing-card${itemKey(item) === state.activeKey ? ' active' : ''}" data-key="${itemKey(item)}" type="button">
-    <div class="card-head"><h2>${escapeHtml(getName(item))} <small>${escapeHtml(item.unit || '')}</small></h2><span><b class="round-badge">${item.round}차</b><span class="type-badge">${escapeHtml(item.housingType.replace('(주거용)', ''))}</span></span></div>
+    <div class="card-head"><h2>${escapeHtml(getName(item))} <small>${escapeHtml(item.unit || '')}</small></h2><span>${item.evCharger ? `<b class="charger-badge">⚡ ${item.evCharger.distanceM}m</b>` : ''}<b class="round-badge">${item.round}차</b><span class="type-badge">${escapeHtml(item.housingType.replace('(주거용)', ''))}</span></span></div>
     <p class="address">${escapeHtml(item.address)}</p>
     <div class="facts"><span>전용면적<strong>${item.areaPyeong}평 <small>· ${item.areaM2}㎡</small></strong></span><span>보증금<strong>${won(item.depositWon)}</strong></span><span>현재 신청<strong>${item.applicants}명</strong></span></div>
   </button>`).join('');
@@ -118,11 +121,13 @@ function applyFilters() {
   const district = $('#districtFilter').value;
   const [areaMin, areaMax] = ($('#areaFilter').value || '0-Infinity').split('-').map(Number);
   const [depositMin, depositMax] = ($('#depositFilter').value || '0-Infinity').split('-').map(Number);
+  const chargerOnly = $('#chargerFilter').value === 'yes';
   state.filtered = state.all.filter((item) => {
     const haystack = `${item.city} ${item.district} ${item.address} ${item.buildingName || ''}`.toLowerCase();
     return (!query || haystack.includes(query)) && (!round || item.round === round) && (!city || item.city === city) && (!district || item.district === district)
       && item.areaPyeong >= areaMin && item.areaPyeong < areaMax
-      && item.depositWon >= depositMin && item.depositWon < depositMax;
+      && item.depositWon >= depositMin && item.depositWon < depositMax
+      && (!chargerOnly || item.evCharger);
   });
   const sort = $('#sortSelect').value;
   state.filtered.sort((a, b) => sort === 'areaDesc' ? b.areaM2 - a.areaM2
@@ -170,6 +175,10 @@ async function loadData() {
   const shortCity = (city) => city.replace('특별시', '').replace('광역시', '').replace('도', '');
   $('#regionSummary').innerHTML = cities.map((city) => `<span class="region-stat">${escapeHtml(shortCity(city))}<strong>${state.all.filter((item) => item.city === city).length}</strong></span>`).join('');
   $('#roundSummary').textContent = `2026 든든전세 · ${rounds.map((round) => `${round}차`).join(' · ')}`;
+  if (data.meta.evCheckedAt) {
+    $('#chargerFilter').disabled = false;
+    $('#chargerFilter').options[0].textContent = '전체 매물';
+  }
   const latestCount = state.all.filter((item) => item.round === rounds[0]).length;
   const applicantStatus = data.meta.applicantsChecked ? ` · 이번 갱신 ${data.meta.applicantsChecked}/${latestCount}` : '';
   $('#updatedAt').textContent = `${new Date(data.meta.fetchedAt).toLocaleString('ko-KR')} 기준${applicantStatus} · 좌표 ${data.meta.located}/${data.meta.total}`;
@@ -178,7 +187,7 @@ async function loadData() {
   fitMarkers();
 }
 
-['searchInput', 'roundFilter', 'districtFilter', 'areaFilter', 'depositFilter', 'sortSelect'].forEach((id) => {
+['searchInput', 'roundFilter', 'districtFilter', 'areaFilter', 'depositFilter', 'chargerFilter', 'sortSelect'].forEach((id) => {
   $(`#${id}`).addEventListener(id === 'searchInput' ? 'input' : 'change', applyFilters);
 });
 $('#cityFilter').addEventListener('change', () => { updateDistrictOptions(); applyFilters(); });

@@ -70,6 +70,7 @@ select:hover { border-color: #aab5c2; background-color: #fafbfd; }
 .card-head h2 small { font-weight: 500; }
 .type-badge { flex: none; color: #788291; font-size: .56rem; font-weight: 600; }
 .round-badge { margin-right: .3rem; padding: .18rem .38rem; border-radius: 999px; color: white; background: var(--accent); font-size: .52rem; }
+.charger-badge { margin-right: .3rem; color: #087f5b; font-size: .55rem; }
 .address { overflow: hidden; margin: .32rem 0 .8rem; color: var(--muted); font-size: .62rem; text-overflow: ellipsis; white-space: nowrap; }
 .facts { display: grid; grid-template-columns: 1.15fr .85fr .7fr; gap: .6rem; }
 .facts span { display: flex; flex-direction: column; color: #8a94a1; font-size: .54rem; }
@@ -82,13 +83,16 @@ select:hover { border-color: #aab5c2; background-color: #fafbfd; }
 
 .price-marker { display: flex; align-items: center; justify-content: center; min-width: 3.1rem; height: 1.65rem; padding: 0 .5rem; border: 1px solid rgba(255,255,255,.9); border-radius: .15rem .7rem .7rem .7rem; color: white; background: var(--accent); box-shadow: 0 .25rem .75rem rgba(25, 66, 137, .24); font: 650 .65rem "IBM Plex Sans KR", sans-serif; transition: transform .2s; }
 .price-marker.active { transform: scale(1.12); background: #153e88; }
+.price-marker.has-charger { background: #087f5b; box-shadow: 0 .25rem .75rem rgba(8,127,91,.28); }
 .map-dot { width: .62rem; height: .62rem; border: 2px solid white; border-radius: 50%; background: var(--accent); box-shadow: 0 .18rem .5rem rgba(25,66,137,.3); }
+.map-dot.has-charger { background: #087f5b; }
 .naver-popup { padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .25rem .9rem .25rem .25rem; background: white; box-shadow: 0 1rem 2.5rem rgba(35,52,75,.2); font-family: "IBM Plex Sans KR", sans-serif; }
 .popup-title { margin: 0 0 .3rem; font-size: .85rem; }
 .popup-address { max-width: 16rem; margin: 0 0 .65rem; color: var(--muted); font-size: .62rem; line-height: 1.55; }
 .popup-facts { display: flex; gap: .7rem; font-size: .68rem; font-weight: 600; }
 .popup-facts b { color: var(--accent); }
 .popup-link { display: block; margin-top: .75rem; color: var(--accent); font-size: .65rem; font-weight: 600; text-decoration: none; }
+.charger-link { display: block; margin-top: .7rem; color: #087f5b; font-size: .65rem; font-weight: 650; text-decoration: none; }
 
 .region-summary, .map-legend, .fit-button { position: absolute; z-index: 450; border: 1px solid rgba(255,255,255,.85); background: rgba(248,250,252,.9); box-shadow: 0 .5rem 1.8rem rgba(35,52,75,.12); backdrop-filter: blur(12px); }
 .region-summary { top: 1.25rem; left: 29.5rem; display: flex; overflow: hidden; border-radius: .2rem .8rem .8rem .8rem; }
@@ -97,6 +101,7 @@ select:hover { border-color: #aab5c2; background-color: #fafbfd; }
 .region-stat strong { color: var(--ink); font-size: .8rem; }
 .map-legend { right: 1.25rem; bottom: 1.25rem; display: flex; gap: 1rem; padding: .55rem .75rem; border-radius: .2rem; color: #697483; font-size: .58rem; }
 .marker-sample { display: inline-block; width: .45rem; height: .45rem; margin-right: .32rem; border-radius: 50%; background: var(--accent); }
+.marker-sample.charger { background: #087f5b; }
 .fit-button { top: 1.25rem; right: 1.25rem; padding: .58rem .75rem; border-radius: .2rem; color: var(--ink); font-size: .65rem; font-weight: 600; transition: color .2s, background .2s; }
 .fit-button:hover { color: white; background: var(--accent); }
 .toast { position: fixed; z-index: 700; right: 1.25rem; bottom: -5rem; max-width: 22rem; padding: .75rem 1rem; color: white; background: var(--ink); font-size: .72rem; opacity: 0; transition: transform .25s, opacity .25s; }

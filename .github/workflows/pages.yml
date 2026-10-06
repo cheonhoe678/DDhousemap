@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   workflow_run:
-    workflows: [Refresh applicant counts]
+    workflows: [Refresh applicant counts, Refresh EV chargers]
     types: [completed]
   workflow_dispatch:
 

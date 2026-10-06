@@ -6,6 +6,7 @@
   "scripts": {
     "refresh": "node scripts/refresh-data.mjs",
     "refresh:applicants": "node scripts/refresh-applicants.mjs",
+    "refresh:chargers": "node scripts/refresh-chargers.mjs",
     "start": "node server.mjs",
     "test": "node scripts/refresh-data.test.mjs"
   },

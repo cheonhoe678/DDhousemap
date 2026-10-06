@@ -17,7 +17,7 @@
     <section class="map-panel" aria-label="든든전세 지도">
       <div id="map"></div>
       <div id="regionSummary" class="region-summary" aria-label="지역별 주택 수"></div>
-      <div class="map-legend"><span><i class="marker-sample"></i>확대하면 보증금 표시</span><span>NAVER 지도</span></div>
+      <div class="map-legend"><span><i class="marker-sample"></i>일반</span><span><i class="marker-sample charger"></i>충전소 300m</span><span>NAVER 지도</span></div>
       <button id="fitButton" class="fit-button" type="button">전국 보기</button>
     </section>
 
@@ -49,6 +49,7 @@
           <label><span>시·군·구</span><select id="districtFilter"><option value="">전체 시·군·구</option></select></label>
           <label><span>면적</span><select id="areaFilter"><option value="">전체 평수</option><option value="0-10">10평 미만</option><option value="10-15">10–15평</option><option value="15-20">15–20평</option><option value="20-99">20평 이상</option></select></label>
           <label><span>보증금</span><select id="depositFilter"><option value="">전체 금액</option><option value="0-100000000">1억 미만</option><option value="100000000-150000000">1–1.5억</option><option value="150000000-200000000">1.5–2억</option><option value="200000000-999999999">2억 이상</option></select></label>
+          <label><span>전기차 충전소</span><select id="chargerFilter" disabled><option value="">정보 준비 중</option><option value="yes">300m 이내만</option></select></label>
         </div>
         <div class="sort-row">
           <p><strong id="resultCount">0</strong>호가 조건에 맞아요</p>
