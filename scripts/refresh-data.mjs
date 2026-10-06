@@ -16,17 +16,24 @@ export function roundFor(noticeDate, listings) {
 }
 
 async function fetchText(url, options = {}) {
-  const { encoding = 'utf-8', timeout = 60_000, ...fetchOptions } = options;
-  const response = await fetch(url, {
-    ...fetchOptions,
-    signal: AbortSignal.timeout(timeout),
-    headers: {
-      'user-agent': 'Mozilla/5.0 (compatible; HUG-Jeonse-Map/1.0)',
-      ...fetchOptions.headers,
-    },
-  });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
-  return new TextDecoder(encoding).decode(await response.arrayBuffer());
+  const { encoding = 'utf-8', timeout = 60_000, retries = 2, ...fetchOptions } = options;
+  for (let attempt = 0; ; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        ...fetchOptions,
+        signal: AbortSignal.timeout(timeout),
+        headers: {
+          'user-agent': 'Mozilla/5.0 (compatible; HUG-Jeonse-Map/1.0)',
+          ...fetchOptions.headers,
+        },
+      });
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${url}`);
+      return new TextDecoder(encoding).decode(await response.arrayBuffer());
+    } catch (error) {
+      if (attempt >= retries) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+    }
+  }
 }
 
 async function getHugPage(page) {
@@ -75,9 +82,9 @@ export async function getCurrentNotice() {
   const pageCount = Math.ceil(first.total / 10);
   console.log(`HUG 최신 공고 ${first.total}건(${pageCount}페이지) 확인`);
   const pages = [first];
-  for (let page = 2; page <= pageCount; page += 10) {
+  for (let page = 2; page <= pageCount; page += 5) {
     pages.push(...await Promise.all(Array.from(
-      { length: Math.min(10, pageCount - page + 1) },
+      { length: Math.min(5, pageCount - page + 1) },
       (_, index) => getHugPage(page + index),
     )));
   }
