@@ -4,7 +4,7 @@ import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = path.join(ROOT, 'public', 'data.json');
-const SEARCH_API = 'https://openapi.naver.com/v1/search/local.json';
+const SEARCH_API = 'https://naverapihub.apigw.ntruss.com/search/v1/local';
 const RADIUS_M = 300;
 const clean = (value = '') => value.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
@@ -19,8 +19,10 @@ export function distanceMeters(from, to) {
 
 export function nearestCharger(listing, items, radiusM = RADIUS_M) {
   return items.map((item) => {
-    const lat = Number(item.mapy) / 10_000_000;
-    const lng = Number(item.mapx) / 10_000_000;
+    const rawLat = Number(item.mapy);
+    const rawLng = Number(item.mapx);
+    const lat = Math.abs(rawLat) > 90 ? rawLat / 10_000_000 : rawLat;
+    const lng = Math.abs(rawLng) > 180 ? rawLng / 10_000_000 : rawLng;
     return {
       name: clean(item.title),
       address: clean(item.roadAddress || item.address),
@@ -42,10 +44,11 @@ async function searchLocal(query, clientId, clientSecret) {
   const url = new URL(SEARCH_API);
   url.searchParams.set('query', query);
   url.searchParams.set('display', '5');
+  url.searchParams.set('format', 'json');
   for (let attempt = 0; ; attempt += 1) {
     const response = await fetch(url, {
       signal: AbortSignal.timeout(20_000),
-      headers: { 'X-Naver-Client-Id': clientId, 'X-Naver-Client-Secret': clientSecret },
+      headers: { 'X-NCP-APIGW-API-KEY-ID': clientId, 'X-NCP-APIGW-API-KEY': clientSecret },
     }).catch((error) => ({ ok: false, status: 0, statusText: error.message }));
     if (response.ok) return (await response.json()).items || [];
     if (attempt >= 2 || response.status === 401 || response.status === 403) {
