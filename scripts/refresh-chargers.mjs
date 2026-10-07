@@ -48,7 +48,10 @@ async function searchLocal(query, clientId, clientSecret) {
       headers: { 'X-Naver-Client-Id': clientId, 'X-Naver-Client-Secret': clientSecret },
     }).catch((error) => ({ ok: false, status: 0, statusText: error.message }));
     if (response.ok) return (await response.json()).items || [];
-    if (attempt >= 2) throw new Error(`네이버 지역 검색 실패 (${response.status} ${response.statusText})`);
+    if (attempt >= 2 || response.status === 401 || response.status === 403) {
+      const detail = typeof response.text === 'function' ? clean(await response.text()) : '';
+      throw new Error(`네이버 지역 검색 실패 (${response.status} ${response.statusText})${detail ? `: ${detail}` : ''}`);
+    }
     await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
   }
 }
