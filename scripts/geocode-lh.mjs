@@ -19,7 +19,7 @@ export async function geocodeLh() {
   for (let index = 0; index < entries.length; index += 3) {
     await Promise.all(entries.slice(index, index + 3).map(async (listings) => {
       const item = listings[0];
-      const queries = [cleanAddress(item.address), `${item.city} ${item.district} ${item.buildingName}`];
+      const queries = [cleanAddress(item.address), item.address.split('(')[0].trim(), `${item.city} ${item.district} ${item.buildingName}`];
       let location = null;
       for (const query of queries) {
         const results = await searchLocal(query, clientId, clientSecret);
