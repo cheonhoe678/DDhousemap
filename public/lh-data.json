@@ -7,13 +7,13 @@
     "sourceFile": "2026년경기남부든든전세매입임대주택주택목록(2026.09.30).xlsx",
     "importedAt": "2026-10-15T02:44:09.5636818Z",
     "total": 227,
-    "located": 222,
+    "located": 227,
     "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
     "documentTargetAnnouncement": "2026.10.27. 17:00 이후",
     "winnerAnnouncement": "2026.12.02. 17:00 이후",
     "eligibility": "모집공고일(2026.09.30.) 현재 수도권에 거주하는 무주택세대구성원",
     "leasePeriod": "2년, 재계약 3회 가능(최장 8년)",
-    "geocodedAt": "2026-10-15T02:48:38.734Z"
+    "geocodedAt": "2026-10-15T02:51:11.933Z"
   },
   "listings": [
     {
@@ -137,8 +137,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": null,
-      "lng": null
+      "lat": 37.2553307,
+      "lng": 126.9707186
     },
     {
       "provider": "LH",
@@ -168,8 +168,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": null,
-      "lng": null
+      "lat": 37.2553307,
+      "lng": 126.9707186
     },
     {
       "provider": "LH",
@@ -199,8 +199,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": null,
-      "lng": null
+      "lat": 37.2553307,
+      "lng": 126.9707186
     },
     {
       "provider": "LH",
@@ -230,8 +230,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": null,
-      "lng": null
+      "lat": 37.2553307,
+      "lng": 126.9707186
     },
     {
       "provider": "LH",
@@ -6492,8 +6492,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": null,
-      "lng": null
+      "lat": 37.2823210577598,
+      "lng": 127.143188230283
     },
     {
       "provider": "LH",
