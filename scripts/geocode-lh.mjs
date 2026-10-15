@@ -6,6 +6,11 @@ import { coordinatesFor, searchLocal } from './refresh-chargers.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = path.join(ROOT, 'public', 'lh-data.json');
 const cleanAddress = (address) => address.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+const FALLBACK_COORDINATES = new Map([
+  ['경기도 수원시 권선구 호매실로 29-9(고색동) 라움A동', { lat: 37.2553307, lng: 126.9707186 }],
+  ['경기도 수원시 권선구 호매실로 29-9(고색동) 라움B동', { lat: 37.2553307, lng: 126.9707186 }],
+  ['경기도 용인시 기흥구 동백죽전대로527번길 98-19(중동) 컨티넨탈 제이디하우스', { lat: 37.2823210577598, lng: 127.143188230283 }],
+]);
 
 export async function geocodeLh() {
   const clientId = process.env.NAVER_SEARCH_CLIENT_ID;
@@ -27,7 +32,7 @@ export async function geocodeLh() {
         location = results.map(coordinatesFor).find(Boolean);
         if (location) break;
       }
-      listings.forEach((listing) => Object.assign(listing, location || { lat: null, lng: null }));
+      listings.forEach((listing) => Object.assign(listing, location || FALLBACK_COORDINATES.get(listing.address) || { lat: null, lng: null }));
     }));
   }
 
