@@ -13,10 +13,10 @@
     "applicantsFetchedAt": "2026-10-12T01:46:05.080Z",
     "applicantsChecked": 289,
     "applicantsNextPage": 31,
-    "evCheckedAt": "2026-10-11T22:01:29.207Z",
+    "evCheckedAt": "2026-10-15T02:55:09.773Z",
     "evRadiusM": 300,
     "evBuildings": 814,
-    "evMatches": 54
+    "evMatches": 56
   },
   "listings": [
     {
@@ -720,7 +720,14 @@
       "buildingName": "해비치",
       "unit": "504",
       "round": 11,
-      "evCharger": null
+      "evCharger": {
+        "name": "한국건강관리협회 인천지부 전기차충전소",
+        "address": "인천광역시 남동구 인주대로 556",
+        "lat": 37.449787,
+        "lng": 126.698601,
+        "distanceM": 207,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EA%B5%AD%EA%B1%B4%EA%B0%95%EA%B4%80%EB%A6%AC%ED%98%91%ED%9A%8C%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EB%B6%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 269,
@@ -4142,7 +4149,14 @@
       "buildingName": "리치아파트",
       "unit": "105동503",
       "round": 11,
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 116,
@@ -4744,12 +4758,12 @@
       "unit": "203",
       "round": 11,
       "evCharger": {
-        "name": "신월 스위트드림아파트 도로옆 지상공영주차장 전기차충전소",
-        "address": "서울특별시 양천구 곰달래로11길 56",
-        "lat": 37.5346833,
-        "lng": 126.8346089,
-        "distanceM": 167,
-        "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EC%9B%94%20%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%93%9C%EB%A6%BC%EC%95%84%ED%8C%8C%ED%8A%B8%20%EB%8F%84%EB%A1%9C%EC%98%86%20%EC%A7%80%EC%83%81%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "곰달래5길 노상공영주차장 전기차충전소",
+        "address": "서울특별시 양천구 신월동 804",
+        "lat": 37.5310591,
+        "lng": 126.833992,
+        "distanceM": 245,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B3%B0%EB%8B%AC%EB%9E%985%EA%B8%B8%20%EB%85%B8%EC%83%81%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -5622,7 +5636,14 @@
       "buildingName": "리치아파트",
       "unit": "106동604",
       "round": 11,
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 50,
@@ -19160,7 +19181,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동301호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 348,
@@ -19182,7 +19210,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동303호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 347,
@@ -19336,7 +19371,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동404호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 340,
@@ -19447,12 +19489,12 @@
       "buildingName": "센트럴타워",
       "unit": "204호",
       "evCharger": {
-        "name": "부평한라비발디오피스텔 전기차충전소",
-        "address": "인천광역시 부평구 대정로 7",
-        "lat": 37.4979794,
-        "lng": 126.7235459,
-        "distanceM": 151,
-        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%ED%8F%89%ED%95%9C%EB%9D%BC%EB%B9%84%EB%B0%9C%EB%94%94%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%94%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "부평구보건소 전기차충전소",
+        "address": "인천광역시 부평구 부흥로 291 부평구 보건소",
+        "lat": 37.4987534,
+        "lng": 126.723923,
+        "distanceM": 79,
+        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%ED%8F%89%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -19563,7 +19605,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동601호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 330,
@@ -19585,7 +19634,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동803호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 329,
@@ -19607,7 +19663,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동805호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 328,
@@ -19629,7 +19692,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동801호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 327,
@@ -19812,7 +19882,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동804호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 319,
@@ -21527,7 +21604,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "105동902호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 242,
@@ -23425,7 +23509,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "106동502호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 157,
@@ -23447,7 +23538,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "106동802호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 156,
@@ -24099,7 +24197,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "106동1103호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 127,
@@ -24121,7 +24226,14 @@
       "lng": 126.8420262,
       "buildingName": "리치아파트",
       "unit": "106동1201호",
-      "evCharger": null
+      "evCharger": {
+        "name": "한양아이클래스 전기차충전소",
+        "address": "서울특별시 강서구 강서로7길 107",
+        "lat": 37.528841,
+        "lng": 126.84177,
+        "distanceM": 95,
+        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EC%96%91%EC%95%84%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 126,

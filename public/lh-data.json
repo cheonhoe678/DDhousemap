@@ -13,7 +13,11 @@
     "winnerAnnouncement": "2026.12.02. 17:00 이후",
     "eligibility": "모집공고일(2026.09.30.) 현재 수도권에 거주하는 무주택세대구성원",
     "leasePeriod": "2년, 재계약 3회 가능(최장 8년)",
-    "geocodedAt": "2026-10-15T02:51:11.933Z"
+    "geocodedAt": "2026-10-15T02:51:11.933Z",
+    "evCheckedAt": "2026-10-15T02:55:09.774Z",
+    "evRadiusM": 300,
+    "evBuildings": 34,
+    "evMatches": 9
   },
   "listings": [
     {
@@ -45,7 +49,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2558665,
-      "lng": 126.9709647
+      "lng": 126.9709647,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -76,7 +81,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2558665,
-      "lng": 126.9709647
+      "lng": 126.9709647,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -107,7 +113,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2558665,
-      "lng": 126.9709647
+      "lng": 126.9709647,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -138,7 +145,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2553307,
-      "lng": 126.9707186
+      "lng": 126.9707186,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -169,7 +177,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2553307,
-      "lng": 126.9707186
+      "lng": 126.9707186,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -200,7 +209,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2553307,
-      "lng": 126.9707186
+      "lng": 126.9707186,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -231,7 +241,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2553307,
-      "lng": 126.9707186
+      "lng": 126.9707186,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -262,7 +273,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2728448,
-      "lng": 127.04894
+      "lng": 127.04894,
+      "evCharger": {
+        "name": "수원시 매탄2동주민센터 전기차충전소",
+        "address": "경기도 수원시 영통구 매영로39번길 23",
+        "lat": 37.2704021,
+        "lng": 127.0475673,
+        "distanceM": 298,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%8B%9C%20%EB%A7%A4%ED%83%842%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -293,7 +312,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2728448,
-      "lng": 127.04894
+      "lng": 127.04894,
+      "evCharger": {
+        "name": "수원시 매탄2동주민센터 전기차충전소",
+        "address": "경기도 수원시 영통구 매영로39번길 23",
+        "lat": 37.2704021,
+        "lng": 127.0475673,
+        "distanceM": 298,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%8B%9C%20%EB%A7%A4%ED%83%842%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -324,7 +351,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2962192,
-      "lng": 127.0042731
+      "lng": 127.0042731,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 225,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -355,7 +390,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2962192,
-      "lng": 127.0042731
+      "lng": 127.0042731,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 225,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -386,7 +429,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2978682,
-      "lng": 127.0064505
+      "lng": 127.0064505,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 86,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -417,7 +468,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2978682,
-      "lng": 127.0064505
+      "lng": 127.0064505,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 86,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -448,7 +507,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2978682,
-      "lng": 127.0064505
+      "lng": 127.0064505,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 86,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -479,7 +546,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2978682,
-      "lng": 127.0064505
+      "lng": 127.0064505,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 86,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -510,7 +585,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2978682,
-      "lng": 127.0064505
+      "lng": 127.0064505,
+      "evCharger": {
+        "name": "수원아너스빌위즈상가 전기차충전소",
+        "address": "경기도 수원시 장안구 송원로 20",
+        "lat": 37.297104,
+        "lng": 127.006566,
+        "distanceM": 86,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%EC%9C%84%EC%A6%88%EC%83%81%EA%B0%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -541,7 +624,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -572,7 +656,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -603,7 +688,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -634,7 +720,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -665,7 +752,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -696,7 +784,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -727,7 +816,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -758,7 +848,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -789,7 +880,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -820,7 +912,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -851,7 +944,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -882,7 +976,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -913,7 +1008,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -944,7 +1040,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -975,7 +1072,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1006,7 +1104,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1037,7 +1136,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1068,7 +1168,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1099,7 +1200,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1130,7 +1232,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1161,7 +1264,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1192,7 +1296,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1223,7 +1328,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1254,7 +1360,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1285,7 +1392,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1316,7 +1424,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1347,7 +1456,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1378,7 +1488,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1409,7 +1520,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1440,7 +1552,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1471,7 +1584,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1502,7 +1616,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1533,7 +1648,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1564,7 +1680,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1595,7 +1712,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1626,7 +1744,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1657,7 +1776,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1688,7 +1808,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1719,7 +1840,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1750,7 +1872,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1781,7 +1904,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1812,7 +1936,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1843,7 +1968,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1874,7 +2000,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1905,7 +2032,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1936,7 +2064,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1967,7 +2096,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -1998,7 +2128,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2029,7 +2160,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2060,7 +2192,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2091,7 +2224,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2122,7 +2256,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2153,7 +2288,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2184,7 +2320,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2215,7 +2352,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2246,7 +2384,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2277,7 +2416,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2308,7 +2448,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2339,7 +2480,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2370,7 +2512,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2401,7 +2544,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2432,7 +2576,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2463,7 +2608,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2494,7 +2640,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2525,7 +2672,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2556,7 +2704,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2587,7 +2736,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2618,7 +2768,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2649,7 +2800,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2680,7 +2832,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2711,7 +2864,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2742,7 +2896,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2773,7 +2928,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2804,7 +2960,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2835,7 +2992,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2866,7 +3024,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2897,7 +3056,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2928,7 +3088,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2959,7 +3120,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -2990,7 +3152,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2673883,
-      "lng": 127.0689355
+      "lng": 127.0689355,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3021,7 +3184,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3012678,
-      "lng": 126.9725436
+      "lng": 126.9725436,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3052,7 +3216,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2992754,
-      "lng": 126.9694651
+      "lng": 126.9694651,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3083,7 +3248,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2992754,
-      "lng": 126.9694651
+      "lng": 126.9694651,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3114,7 +3280,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2992754,
-      "lng": 126.9694651
+      "lng": 126.9694651,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3145,7 +3312,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2992754,
-      "lng": 126.9694651
+      "lng": 126.9694651,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3176,7 +3344,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2760224,
-      "lng": 127.0265962
+      "lng": 127.0265962,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3207,7 +3376,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2760224,
-      "lng": 127.0265962
+      "lng": 127.0265962,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3238,7 +3408,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2955147,
-      "lng": 127.0104537
+      "lng": 127.0104537,
+      "evCharger": {
+        "name": "수원뜨레모아라이프아파트2 전기차충전소",
+        "address": "경기도 수원시 장안구 송정로118번길 7",
+        "lat": 37.295518,
+        "lng": 127.010368,
+        "distanceM": 8,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EB%9C%A8%EB%A0%88%EB%AA%A8%EC%95%84%EB%9D%BC%EC%9D%B4%ED%94%84%EC%95%84%ED%8C%8C%ED%8A%B82%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3269,7 +3447,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2955147,
-      "lng": 127.0104537
+      "lng": 127.0104537,
+      "evCharger": {
+        "name": "수원뜨레모아라이프아파트2 전기차충전소",
+        "address": "경기도 수원시 장안구 송정로118번길 7",
+        "lat": 37.295518,
+        "lng": 127.010368,
+        "distanceM": 8,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EB%9C%A8%EB%A0%88%EB%AA%A8%EC%95%84%EB%9D%BC%EC%9D%B4%ED%94%84%EC%95%84%ED%8C%8C%ED%8A%B82%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3300,7 +3486,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2955147,
-      "lng": 127.0104537
+      "lng": 127.0104537,
+      "evCharger": {
+        "name": "수원뜨레모아라이프아파트2 전기차충전소",
+        "address": "경기도 수원시 장안구 송정로118번길 7",
+        "lat": 37.295518,
+        "lng": 127.010368,
+        "distanceM": 8,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EB%9C%A8%EB%A0%88%EB%AA%A8%EC%95%84%EB%9D%BC%EC%9D%B4%ED%94%84%EC%95%84%ED%8C%8C%ED%8A%B82%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3331,7 +3525,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2955147,
-      "lng": 127.0104537
+      "lng": 127.0104537,
+      "evCharger": {
+        "name": "수원뜨레모아라이프아파트2 전기차충전소",
+        "address": "경기도 수원시 장안구 송정로118번길 7",
+        "lat": 37.295518,
+        "lng": 127.010368,
+        "distanceM": 8,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EB%9C%A8%EB%A0%88%EB%AA%A8%EC%95%84%EB%9D%BC%EC%9D%B4%ED%94%84%EC%95%84%ED%8C%8C%ED%8A%B82%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3362,7 +3564,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2955147,
-      "lng": 127.0104537
+      "lng": 127.0104537,
+      "evCharger": {
+        "name": "수원뜨레모아라이프아파트2 전기차충전소",
+        "address": "경기도 수원시 장안구 송정로118번길 7",
+        "lat": 37.295518,
+        "lng": 127.010368,
+        "distanceM": 8,
+        "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%9B%90%EB%9C%A8%EB%A0%88%EB%AA%A8%EC%95%84%EB%9D%BC%EC%9D%B4%ED%94%84%EC%95%84%ED%8C%8C%ED%8A%B82%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3393,7 +3603,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2907538,
-      "lng": 126.8681487
+      "lng": 126.8681487,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3424,7 +3635,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2907538,
-      "lng": 126.8681487
+      "lng": 126.8681487,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3455,7 +3667,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2907538,
-      "lng": 126.8681487
+      "lng": 126.8681487,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3486,7 +3699,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
-      "lng": 126.8503374
+      "lng": 126.8503374,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3517,7 +3731,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
-      "lng": 126.8503374
+      "lng": 126.8503374,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3548,7 +3763,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
-      "lng": 126.8503374
+      "lng": 126.8503374,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3579,7 +3795,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
-      "lng": 126.8503374
+      "lng": 126.8503374,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3610,7 +3827,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3641,7 +3859,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3672,7 +3891,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3703,7 +3923,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3734,7 +3955,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3765,7 +3987,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3796,7 +4019,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3827,7 +4051,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3858,7 +4083,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3889,7 +4115,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3920,7 +4147,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3951,7 +4179,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -3982,7 +4211,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4013,7 +4243,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4044,7 +4275,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4075,7 +4307,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4106,7 +4339,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4137,7 +4371,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4168,7 +4403,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4199,7 +4435,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4230,7 +4467,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4261,7 +4499,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4292,7 +4531,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4323,7 +4563,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4354,7 +4595,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4385,7 +4627,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4416,7 +4659,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4447,7 +4691,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4478,7 +4723,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4509,7 +4755,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4540,7 +4787,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4571,7 +4819,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4602,7 +4851,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4633,7 +4883,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4664,7 +4915,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4695,7 +4947,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4726,7 +4979,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4757,7 +5011,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3007267,
-      "lng": 126.8130189
+      "lng": 126.8130189,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4788,7 +5043,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3928042,
-      "lng": 126.9294736
+      "lng": 126.9294736,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4819,7 +5075,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3928042,
-      "lng": 126.9294736
+      "lng": 126.9294736,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4850,7 +5107,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3928042,
-      "lng": 126.9294736
+      "lng": 126.9294736,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4881,7 +5139,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3928042,
-      "lng": 126.9294736
+      "lng": 126.9294736,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4912,7 +5171,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3928042,
-      "lng": 126.9294736
+      "lng": 126.9294736,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4943,7 +5203,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3880815,
-      "lng": 126.932285
+      "lng": 126.932285,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -4974,7 +5235,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4037344,
-      "lng": 126.9136032
+      "lng": 126.9136032,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5005,7 +5267,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3934832,
-      "lng": 126.9292716
+      "lng": 126.9292716,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5036,7 +5299,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3934832,
-      "lng": 126.9292716
+      "lng": 126.9292716,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5067,7 +5331,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3927586,
-      "lng": 126.9307269
+      "lng": 126.9307269,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5098,7 +5363,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3927586,
-      "lng": 126.9307269
+      "lng": 126.9307269,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5129,7 +5395,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3927586,
-      "lng": 126.9307269
+      "lng": 126.9307269,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5160,7 +5427,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3927586,
-      "lng": 126.9307269
+      "lng": 126.9307269,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5191,7 +5459,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3721313,
-      "lng": 126.9574139
+      "lng": 126.9574139,
+      "evCharger": {
+        "name": "개성 하이뷰아파트 전기차충전소",
+        "address": "경기도 안양시 동안구 경수대로 555 개성하이뷰",
+        "lat": 37.3720746,
+        "lng": 126.9573269,
+        "distanceM": 10,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EC%84%B1%20%ED%95%98%EC%9D%B4%EB%B7%B0%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5222,7 +5498,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3721313,
-      "lng": 126.9574139
+      "lng": 126.9574139,
+      "evCharger": {
+        "name": "개성 하이뷰아파트 전기차충전소",
+        "address": "경기도 안양시 동안구 경수대로 555 개성하이뷰",
+        "lat": 37.3720746,
+        "lng": 126.9573269,
+        "distanceM": 10,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EC%84%B1%20%ED%95%98%EC%9D%B4%EB%B7%B0%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5253,7 +5537,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3670704,
-      "lng": 126.9562826
+      "lng": 126.9562826,
+      "evCharger": {
+        "name": "노블레스뷰 전기차충전소",
+        "address": "경기도 안양시 동안구 엘에스로 30",
+        "lat": 37.367037,
+        "lng": 126.956267,
+        "distanceM": 4,
+        "mapUrl": "https://map.naver.com/p/search/%EB%85%B8%EB%B8%94%EB%A0%88%EC%8A%A4%EB%B7%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5284,7 +5576,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3670704,
-      "lng": 126.9562826
+      "lng": 126.9562826,
+      "evCharger": {
+        "name": "노블레스뷰 전기차충전소",
+        "address": "경기도 안양시 동안구 엘에스로 30",
+        "lat": 37.367037,
+        "lng": 126.956267,
+        "distanceM": 4,
+        "mapUrl": "https://map.naver.com/p/search/%EB%85%B8%EB%B8%94%EB%A0%88%EC%8A%A4%EB%B7%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5315,7 +5615,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3670704,
-      "lng": 126.9562826
+      "lng": 126.9562826,
+      "evCharger": {
+        "name": "노블레스뷰 전기차충전소",
+        "address": "경기도 안양시 동안구 엘에스로 30",
+        "lat": 37.367037,
+        "lng": 126.956267,
+        "distanceM": 4,
+        "mapUrl": "https://map.naver.com/p/search/%EB%85%B8%EB%B8%94%EB%A0%88%EC%8A%A4%EB%B7%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5346,7 +5654,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2949056,
-      "lng": 127.6317136
+      "lng": 127.6317136,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5377,7 +5686,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2949056,
-      "lng": 127.6317136
+      "lng": 127.6317136,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5408,7 +5718,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2949056,
-      "lng": 127.6317136
+      "lng": 127.6317136,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5439,7 +5750,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2949056,
-      "lng": 127.6317136
+      "lng": 127.6317136,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5470,7 +5782,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2949056,
-      "lng": 127.6317136
+      "lng": 127.6317136,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5501,7 +5814,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2949056,
-      "lng": 127.6317136
+      "lng": 127.6317136,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5532,7 +5846,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3108992,
-      "lng": 127.6379955
+      "lng": 127.6379955,
+      "evCharger": {
+        "name": "청아한 오피스텔 전기차충전소",
+        "address": "경기도 여주시 현암2길 58-8",
+        "lat": 37.3108991,
+        "lng": 127.6379955,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EC%B2%AD%EC%95%84%ED%95%9C%20%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%94%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5563,7 +5885,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3108992,
-      "lng": 127.6379955
+      "lng": 127.6379955,
+      "evCharger": {
+        "name": "청아한 오피스텔 전기차충전소",
+        "address": "경기도 여주시 현암2길 58-8",
+        "lat": 37.3108991,
+        "lng": 127.6379955,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EC%B2%AD%EC%95%84%ED%95%9C%20%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%94%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -5594,7 +5924,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.171057,
-      "lng": 127.0509592
+      "lng": 127.0509592,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5625,7 +5956,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.171057,
-      "lng": 127.0509592
+      "lng": 127.0509592,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5656,7 +5988,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.171057,
-      "lng": 127.0509592
+      "lng": 127.0509592,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5687,7 +6020,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.171057,
-      "lng": 127.0509592
+      "lng": 127.0509592,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5718,7 +6052,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.171057,
-      "lng": 127.0509592
+      "lng": 127.0509592,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5749,7 +6084,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.171057,
-      "lng": 127.0509592
+      "lng": 127.0509592,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5780,7 +6116,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.185276,
-      "lng": 127.0436348
+      "lng": 127.0436348,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5811,7 +6148,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2312691,
-      "lng": 127.2148656
+      "lng": 127.2148656,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5842,7 +6180,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2312691,
-      "lng": 127.2148656
+      "lng": 127.2148656,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5873,7 +6212,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2878734,
-      "lng": 127.2141259
+      "lng": 127.2141259,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5904,7 +6244,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5935,7 +6276,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5966,7 +6308,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -5997,7 +6340,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6028,7 +6372,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6059,7 +6404,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6090,7 +6436,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6121,7 +6468,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6152,7 +6500,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6183,7 +6532,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2428353,
-      "lng": 127.1681367
+      "lng": 127.1681367,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6214,7 +6564,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2670935,
-      "lng": 127.1056066
+      "lng": 127.1056066,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6245,7 +6596,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2670935,
-      "lng": 127.1056066
+      "lng": 127.1056066,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6276,7 +6628,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2670935,
-      "lng": 127.1056066
+      "lng": 127.1056066,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6307,7 +6660,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2670935,
-      "lng": 127.1056066
+      "lng": 127.1056066,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6338,7 +6692,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2674469,
-      "lng": 127.1056082
+      "lng": 127.1056082,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6369,7 +6724,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2674469,
-      "lng": 127.1056082
+      "lng": 127.1056082,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6400,7 +6756,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2674469,
-      "lng": 127.1056082
+      "lng": 127.1056082,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6431,7 +6788,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2674469,
-      "lng": 127.1056082
+      "lng": 127.1056082,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6462,7 +6820,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2674469,
-      "lng": 127.1056082
+      "lng": 127.1056082,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6493,7 +6852,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2823210577598,
-      "lng": 127.143188230283
+      "lng": 127.143188230283,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6524,7 +6884,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4517588,
-      "lng": 126.7954464
+      "lng": 126.7954464,
+      "evCharger": {
+        "name": "경기시흥제이엘타워 전기차충전소",
+        "address": "경기도 시흥시 은계중앙로306번길 71",
+        "lat": 37.4517752,
+        "lng": 126.7954628,
+        "distanceM": 2,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%EC%A0%9C%EC%9D%B4%EC%97%98%ED%83%80%EC%9B%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6555,7 +6923,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4517588,
-      "lng": 126.7954464
+      "lng": 126.7954464,
+      "evCharger": {
+        "name": "경기시흥제이엘타워 전기차충전소",
+        "address": "경기도 시흥시 은계중앙로306번길 71",
+        "lat": 37.4517752,
+        "lng": 126.7954628,
+        "distanceM": 2,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%EC%A0%9C%EC%9D%B4%EC%97%98%ED%83%80%EC%9B%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6586,7 +6962,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4517588,
-      "lng": 126.7954464
+      "lng": 126.7954464,
+      "evCharger": {
+        "name": "경기시흥제이엘타워 전기차충전소",
+        "address": "경기도 시흥시 은계중앙로306번길 71",
+        "lat": 37.4517752,
+        "lng": 126.7954628,
+        "distanceM": 2,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%EC%A0%9C%EC%9D%B4%EC%97%98%ED%83%80%EC%9B%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6617,7 +7001,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4517588,
-      "lng": 126.7954464
+      "lng": 126.7954464,
+      "evCharger": {
+        "name": "경기시흥제이엘타워 전기차충전소",
+        "address": "경기도 시흥시 은계중앙로306번길 71",
+        "lat": 37.4517752,
+        "lng": 126.7954628,
+        "distanceM": 2,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%EC%A0%9C%EC%9D%B4%EC%97%98%ED%83%80%EC%9B%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6648,7 +7040,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4517588,
-      "lng": 126.7954464
+      "lng": 126.7954464,
+      "evCharger": {
+        "name": "경기시흥제이엘타워 전기차충전소",
+        "address": "경기도 시흥시 은계중앙로306번길 71",
+        "lat": 37.4517752,
+        "lng": 126.7954628,
+        "distanceM": 2,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%EC%A0%9C%EC%9D%B4%EC%97%98%ED%83%80%EC%9B%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6679,7 +7079,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4362267,
-      "lng": 126.7796886
+      "lng": 126.7796886,
+      "evCharger": null
     },
     {
       "provider": "LH",
@@ -6710,7 +7111,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6741,7 +7150,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6772,7 +7189,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6803,7 +7228,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6834,7 +7267,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6865,7 +7306,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6896,7 +7345,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6927,7 +7384,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6958,7 +7423,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -6989,7 +7462,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -7020,7 +7501,15 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.4319088,
-      "lng": 126.8042027
+      "lng": 126.8042027,
+      "evCharger": {
+        "name": "경기시흥해피에버오피스텔1 전기차충전소",
+        "address": "경기도 시흥시 은계로 114",
+        "lat": 37.4319088,
+        "lng": 126.8042027,
+        "distanceM": 0,
+        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EC%8B%9C%ED%9D%A5%ED%95%B4%ED%94%BC%EC%97%90%EB%B2%84%EC%98%A4%ED%94%BC%EC%8A%A4%ED%85%941%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -7051,7 +7540,8 @@
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.2051924,
-      "lng": 127.0296071
+      "lng": 127.0296071,
+      "evCharger": null
     }
   ]
 }
