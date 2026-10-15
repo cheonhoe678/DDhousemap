@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HUG 든든전세주택을 면적, 보증금, 경쟁률과 함께 지도에서 비교합니다." />
+  <meta name="description" content="HUG·LH 든든전세주택을 면적, 보증금, 경쟁률과 함께 지도에서 비교합니다." />
   <title>든든전세 한눈에</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +44,7 @@
           <input id="searchInput" type="search" placeholder="동네, 건물명, 주소 검색" autocomplete="off" />
         </label>
         <div class="filter-row">
+          <label><span>공급기관</span><select id="providerFilter"><option value="">HUG · LH 전체</option><option value="HUG">HUG</option><option value="LH">LH 경기남부</option></select></label>
           <label><span>모집 차수</span><select id="roundFilter"><option value="">전체 차수</option></select></label>
           <label><span>지역</span><select id="cityFilter"><option value="">전체 지역</option></select></label>
           <label><span>시·군·구</span><select id="districtFilter"><option value="">전체 시·군·구</option></select></label>
@@ -58,7 +59,7 @@
       </section>
 
       <section id="listingList" class="listing-list" aria-live="polite"></section>
-      <footer class="source-note"><span id="updatedAt">불러오는 중…</span><a id="sourceLink" target="_blank" rel="noreferrer">HUG 원문 ↗</a></footer>
+      <footer class="source-note"><span id="updatedAt">불러오는 중…</span><a id="sourceLink" target="_blank" rel="noreferrer">공고 원문 ↗</a></footer>
     </aside>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
   </main>

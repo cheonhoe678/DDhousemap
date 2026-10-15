@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA_FILE = path.join(ROOT, 'public', 'data.json');
+const DATA_FILES = ['data.json', 'lh-data.json'].map((file) => path.join(ROOT, 'public', file));
 const SEARCH_API = 'https://naverapihub.apigw.ntruss.com/search/v1/local';
 const RADIUS_M = 300;
 const clean = (value = '') => value.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
@@ -40,7 +40,15 @@ function searchQuery(item) {
   return `${item.city} ${item.district} ${place} 전기차 충전소`;
 }
 
-async function searchLocal(query, clientId, clientSecret) {
+export function coordinatesFor(item) {
+  const rawLat = Number(item.mapy);
+  const rawLng = Number(item.mapx);
+  const lat = Math.abs(rawLat) > 90 ? rawLat / 10_000_000 : rawLat;
+  const lng = Math.abs(rawLng) > 180 ? rawLng / 10_000_000 : rawLng;
+  return Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
+}
+
+export async function searchLocal(query, clientId, clientSecret) {
   const url = new URL(SEARCH_API);
   url.searchParams.set('query', query);
   url.searchParams.set('display', '5');
@@ -64,9 +72,9 @@ export async function refreshChargers() {
   const clientSecret = process.env.NAVER_SEARCH_CLIENT_SECRET;
   if (!clientId || !clientSecret) throw new Error('NAVER_SEARCH_CLIENT_ID와 NAVER_SEARCH_CLIENT_SECRET을 설정해주세요.');
 
-  const data = JSON.parse(await readFile(DATA_FILE, 'utf8'));
+  const datasets = await Promise.all(DATA_FILES.map(async (file) => JSON.parse(await readFile(file, 'utf8'))));
   const groups = new Map();
-  for (const item of data.listings) {
+  for (const item of datasets.flatMap((data) => data.listings)) {
     if (!Number.isFinite(item.lat) || !Number.isFinite(item.lng)) continue;
     const key = `${item.lat.toFixed(5)},${item.lng.toFixed(5)}`;
     if (!groups.has(key)) groups.set(key, []);
@@ -85,13 +93,17 @@ export async function refreshChargers() {
     }));
   }
 
-  data.meta.evCheckedAt = new Date().toISOString();
-  data.meta.evRadiusM = RADIUS_M;
-  data.meta.evBuildings = entries.length;
-  data.meta.evMatches = matched;
-  await writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+  for (const data of datasets) {
+    const buildingKeys = new Set(data.listings.filter((item) => Number.isFinite(item.lat) && Number.isFinite(item.lng)).map((item) => `${item.lat.toFixed(5)},${item.lng.toFixed(5)}`));
+    const matchedKeys = new Set(data.listings.filter((item) => item.evCharger).map((item) => `${item.lat.toFixed(5)},${item.lng.toFixed(5)}`));
+    data.meta.evCheckedAt = new Date().toISOString();
+    data.meta.evRadiusM = RADIUS_M;
+    data.meta.evBuildings = buildingKeys.size;
+    data.meta.evMatches = matchedKeys.size;
+  }
+  await Promise.all(datasets.map((data, index) => writeFile(DATA_FILES[index], JSON.stringify(data, null, 2), 'utf8')));
   console.log(`전기차 충전소 확인 완료: ${matched}/${entries.length}개 건물 (${RADIUS_M}m 이내)`);
-  return data;
+  return datasets;
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) await refreshChargers();

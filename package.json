@@ -7,8 +7,9 @@
     "refresh": "node scripts/refresh-data.mjs",
     "refresh:applicants": "node scripts/refresh-applicants.mjs",
     "refresh:chargers": "node scripts/refresh-chargers.mjs",
+    "geocode:lh": "node scripts/geocode-lh.mjs",
     "start": "node server.mjs",
-    "test": "node scripts/refresh-data.test.mjs"
+    "test": "node scripts/refresh-data.test.mjs && node scripts/lh-data.test.mjs"
   },
   "dependencies": {
     "cheerio": "^1.1.2",

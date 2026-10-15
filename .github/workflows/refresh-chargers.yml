@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data.json
+          git add public/data.json public/lh-data.json
           git commit -m "Update EV charger matches"
           git pull --rebase origin main
           git push origin main

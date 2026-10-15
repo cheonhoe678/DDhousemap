@@ -1,4 +1,4 @@
-const state = { all: [], filtered: [], markers: new Map(), activeKey: null, favorites: new Set(JSON.parse(localStorage.getItem('hug-favorites') || '[]')) };
+const state = { all: [], filtered: [], metas: {}, markers: new Map(), activeKey: null, favorites: new Set(JSON.parse(localStorage.getItem('hug-favorites') || '[]')) };
 const $ = (selector) => document.querySelector(selector);
 const isStaticDeployment = location.hostname.endsWith('github.io') || location.hostname.endsWith('pages.dev');
 const map = new naver.maps.Map('map', {
@@ -23,7 +23,7 @@ const won = (value) => {
 const markerLabel = (value) => value >= 100_000_000 ? `${Number((value / 100_000_000).toFixed(1))}억` : `${Math.round(value / 1_000_000)}백`;
 const escapeHtml = (text = '') => String(text).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
 const getName = (item) => item.buildingName || item.address.match(/\s([^\s]+)\s+제?\d+층/)?.[1] || `${item.district} 주택`;
-const itemKey = (item) => `${item.round}-${item.id}`;
+const itemKey = (item) => `${item.provider}-${item.round || item.noticeDate}-${item.id}`;
 
 function iconFor(item, active = false) {
   if (map.getZoom() <= 10 && !active) {
@@ -40,10 +40,12 @@ function popupFor(item) {
   const charger = item.evCharger
     ? `<a class="charger-link" href="${escapeHtml(item.evCharger.mapUrl)}" target="_blank" rel="noreferrer">⚡ ${escapeHtml(item.evCharger.name)} · ${item.evCharger.distanceM}m</a>`
     : '';
+  const status = item.provider === 'LH' ? `방 ${escapeHtml(item.rooms || '-')} · 승강기 ${item.elevator === 'Y' ? '있음' : '없음'}` : `신청 ${item.applicants}명`;
+  const linkLabel = item.provider === 'LH' ? 'LH 청약플러스에서 확인하기' : 'HUG 상세에서 신청하기';
   return `<div class="naver-popup"><h3 class="popup-title">${escapeHtml(getName(item))} ${escapeHtml(item.unit || '')}</h3>
     <p class="popup-address">${escapeHtml(item.address)}</p>
-    <div class="popup-facts"><b>${item.areaPyeong}평</b><span>${item.areaM2}㎡</span><span>${won(item.depositWon)}</span><span>신청 ${item.applicants}명</span></div>
-    ${charger}<a class="popup-link" href="${item.detailUrl}" target="_blank" rel="noreferrer">HUG 상세에서 신청하기 ↗</a></div>`;
+    <div class="popup-facts"><b>${item.areaPyeong}평</b><span>${item.areaM2}㎡</span><span>${won(item.depositWon)}</span><span>${status}</span></div>
+    ${charger}<a class="popup-link" href="${item.detailUrl}" target="_blank" rel="noreferrer">${linkLabel} ↗</a></div>`;
 }
 
 function selectListing(item, pan = true) {
@@ -88,11 +90,15 @@ function renderList() {
     $('#listingList').innerHTML = '<div class="empty">조건에 맞는 집이 없어요.<br>필터를 조금 넓혀보세요.</div>';
     return;
   }
-  $('#listingList').innerHTML = state.filtered.map((item) => `<button class="listing-card${itemKey(item) === state.activeKey ? ' active' : ''}" data-key="${itemKey(item)}" type="button">
-    <div class="card-head"><h2>${escapeHtml(getName(item))} <small>${escapeHtml(item.unit || '')}</small></h2><span>${item.evCharger ? `<b class="charger-badge">⚡ ${item.evCharger.distanceM}m</b>` : ''}<b class="round-badge">${item.round}차</b><span class="type-badge">${escapeHtml(item.housingType.replace('(주거용)', ''))}</span></span></div>
-    <p class="address">${escapeHtml(item.address)}</p>
-    <div class="facts"><span>전용면적<strong>${item.areaPyeong}평 <small>· ${item.areaM2}㎡</small></strong></span><span>보증금<strong>${won(item.depositWon)}</strong></span><span>현재 신청<strong>${item.applicants}명</strong></span></div>
-  </button>`).join('');
+  $('#listingList').innerHTML = state.filtered.map((item) => {
+    const badge = item.provider === 'LH' ? '<b class="round-badge lh">LH 경기남부</b>' : `<b class="round-badge">HUG ${item.round}차</b>`;
+    const status = item.provider === 'LH' ? `<span>방·승강기<strong>${escapeHtml(item.rooms || '-')}개 · ${item.elevator === 'Y' ? '있음' : '없음'}</strong></span>` : `<span>현재 신청<strong>${item.applicants}명</strong></span>`;
+    return `<button class="listing-card${itemKey(item) === state.activeKey ? ' active' : ''}" data-key="${itemKey(item)}" type="button">
+      <div class="card-head"><h2>${escapeHtml(getName(item))} <small>${escapeHtml(item.unit || '')}</small></h2><span>${item.evCharger ? `<b class="charger-badge">⚡ ${item.evCharger.distanceM}m</b>` : ''}${badge}<span class="type-badge">${escapeHtml((item.housingType || '').replace('(주거용)', ''))}</span></span></div>
+      <p class="address">${escapeHtml(item.address)}</p>
+      <div class="facts"><span>${item.provider === 'LH' ? '실사용면적' : '전용면적'}<strong>${item.areaPyeong}평 <small>· ${item.areaM2}㎡</small></strong></span><span>보증금<strong>${won(item.depositWon)}</strong></span>${status}</div>
+    </button>`;
+  }).join('');
   document.querySelectorAll('.listing-card').forEach((card) => card.addEventListener('click', () => {
     const item = state.filtered.find((entry) => itemKey(entry) === card.dataset.key);
     selectListing(item);
@@ -105,9 +111,11 @@ function renderList() {
 }
 
 function updateRoundInfo() {
-  const selectedRound = Number($('#roundFilter').value) || Math.max(...state.all.map((item) => item.round));
-  const item = state.all.find((listing) => listing.round === selectedRound);
-  $('#applicationPeriod').textContent = item?.applicationPeriod || 'HUG 원문에서 확인';
+  const provider = $('#providerFilter').value;
+  const selectedRound = Number($('#roundFilter').value);
+  const candidates = state.all.filter((item) => (!provider || item.provider === provider) && (!selectedRound || item.round === selectedRound));
+  const item = (provider ? candidates : state.all.filter((listing) => listing.provider === 'LH')).find((listing) => listing.applicationPeriod);
+  $('#applicationPeriod').textContent = item?.applicationPeriod || '공고 원문에서 확인';
   const match = item?.applicationPeriod?.match(/~\s*(\d{4})\.(\d{2})\.(\d{2})\.\s*(\d{2}):(\d{2})/);
   const deadline = match && new Date(`${match[1]}-${match[2]}-${match[3]}T${match[4]}:${match[5]}:00+09:00`);
   const days = deadline ? Math.ceil((deadline - new Date()) / 86_400_000) : null;
@@ -116,6 +124,7 @@ function updateRoundInfo() {
 
 function applyFilters() {
   const query = $('#searchInput').value.trim().toLowerCase();
+  const provider = $('#providerFilter').value;
   const round = Number($('#roundFilter').value);
   const city = $('#cityFilter').value;
   const district = $('#districtFilter').value;
@@ -124,7 +133,7 @@ function applyFilters() {
   const chargerOnly = $('#chargerFilter').value === 'yes';
   state.filtered = state.all.filter((item) => {
     const haystack = `${item.city} ${item.district} ${item.address} ${item.buildingName || ''}`.toLowerCase();
-    return (!query || haystack.includes(query)) && (!round || item.round === round) && (!city || item.city === city) && (!district || item.district === district)
+    return (!query || haystack.includes(query)) && (!provider || item.provider === provider) && (!round || item.round === round) && (!city || item.city === city) && (!district || item.district === district)
       && item.areaPyeong >= areaMin && item.areaPyeong < areaMax
       && item.depositWon >= depositMin && item.depositWon < depositMax
       && (!chargerOnly || item.evCharger);
@@ -133,7 +142,7 @@ function applyFilters() {
   state.filtered.sort((a, b) => sort === 'areaDesc' ? b.areaM2 - a.areaM2
     : sort === 'depositAsc' ? a.depositWon - b.depositWon
       : sort === 'ratio' ? (a.depositWon / a.areaM2) - (b.depositWon / b.areaM2)
-        : a.applicants - b.applicants);
+        : (a.applicants ?? Infinity) - (b.applicants ?? Infinity));
   updateRoundInfo();
   renderList();
   renderMarkers();
@@ -141,7 +150,8 @@ function applyFilters() {
 
 function updateDistrictOptions() {
   const city = $('#cityFilter').value;
-  const districts = [...new Set(state.all.filter((item) => !city || item.city === city).map((item) => item.district))].sort();
+  const provider = $('#providerFilter').value;
+  const districts = [...new Set(state.all.filter((item) => (!provider || item.provider === provider) && (!city || item.city === city)).map((item) => item.district))].sort();
   $('#districtFilter').innerHTML = '<option value="">전체 시·군·구</option>' + districts.map((district) => `<option>${escapeHtml(district)}</option>`).join('');
 }
 
@@ -162,33 +172,44 @@ function fitMarkers() {
 }
 
 async function loadData() {
-  const response = await fetch(`./data.json?v=${Date.now()}`);
-  if (!response.ok) throw new Error('data.json을 불러오지 못했습니다.');
-  const data = await response.json();
-  state.all = data.listings.map((item) => ({ ...item, round: Number(item.round) || 11 }));
-  const rounds = [...new Set(state.all.map((item) => item.round))].sort((a, b) => b - a);
+  const [hugResponse, lhResponse] = await Promise.all(['data.json', 'lh-data.json'].map((file) => fetch(`./${file}?v=${Date.now()}`)));
+  if (!hugResponse.ok || !lhResponse.ok) throw new Error('주택 데이터를 불러오지 못했습니다.');
+  const [hugData, lhData] = await Promise.all([hugResponse.json(), lhResponse.json()]);
+  state.metas = { HUG: hugData.meta, LH: lhData.meta };
+  state.all = [
+    ...hugData.listings.map((item) => ({ ...item, provider: 'HUG', round: Number(item.round) || 11 })),
+    ...lhData.listings,
+  ];
+  const rounds = [...new Set(state.all.filter((item) => item.provider === 'HUG').map((item) => item.round))].sort((a, b) => b - a);
   $('#roundFilter').innerHTML += rounds.map((round) => `<option value="${round}">${round}차</option>`).join('');
-  $('#roundFilter').value = String(rounds[0]);
+  $('#roundFilter').disabled = true;
   const cities = [...new Set(state.all.map((item) => item.city))].sort();
   $('#cityFilter').innerHTML += cities.map((city) => `<option>${escapeHtml(city)}</option>`).join('');
   updateDistrictOptions();
   const shortCity = (city) => city.replace('특별시', '').replace('광역시', '').replace('도', '');
   $('#regionSummary').innerHTML = cities.map((city) => `<span class="region-stat">${escapeHtml(shortCity(city))}<strong>${state.all.filter((item) => item.city === city).length}</strong></span>`).join('');
-  $('#roundSummary').textContent = `2026 든든전세 · ${rounds.map((round) => `${round}차`).join(' · ')}`;
-  if (data.meta.evCheckedAt) {
+  $('#roundSummary').textContent = `2026 든든전세 · HUG ${rounds.join('·')}차 · LH 경기남부`;
+  if (hugData.meta.evCheckedAt || lhData.meta.evCheckedAt) {
     $('#chargerFilter').disabled = false;
     $('#chargerFilter').options[0].textContent = '전체 매물';
   }
-  const latestCount = state.all.filter((item) => item.round === rounds[0]).length;
-  const applicantStatus = data.meta.applicantsChecked ? ` · 이번 갱신 ${data.meta.applicantsChecked}/${latestCount}` : '';
-  $('#updatedAt').textContent = `${new Date(data.meta.fetchedAt).toLocaleString('ko-KR')} 기준${applicantStatus} · 좌표 ${data.meta.located}/${data.meta.total}`;
-  $('#sourceLink').href = data.meta.source;
+  $('#updatedAt').textContent = `HUG ${hugData.meta.total}호 · LH ${lhData.meta.total}호 · LH 좌표 ${lhData.meta.located}/${lhData.meta.total}`;
+  $('#sourceLink').href = hugData.meta.source;
   applyFilters();
   fitMarkers();
 }
 
 ['searchInput', 'roundFilter', 'districtFilter', 'areaFilter', 'depositFilter', 'chargerFilter', 'sortSelect'].forEach((id) => {
   $(`#${id}`).addEventListener(id === 'searchInput' ? 'input' : 'change', applyFilters);
+});
+$('#providerFilter').addEventListener('change', () => {
+  const provider = $('#providerFilter').value;
+  $('#roundFilter').disabled = provider !== 'HUG';
+  $('#roundFilter').value = provider === 'HUG' ? $('#roundFilter').options[1]?.value || '' : '';
+  $('#sourceLink').href = state.metas[provider]?.source || state.metas.HUG.source;
+  $('#sourceLink').textContent = provider === 'LH' ? 'LH 청약플러스 ↗' : provider === 'HUG' ? 'HUG 원문 ↗' : '공고 원문 ↗';
+  updateDistrictOptions();
+  applyFilters();
 });
 $('#cityFilter').addEventListener('change', () => { updateDistrictOptions(); applyFilters(); });
 $('#fitButton').addEventListener('click', fitMarkers);
@@ -221,5 +242,5 @@ document.querySelectorAll('.mobile-tabs button').forEach((button) => button.addE
   if (button.dataset.view === 'map') setTimeout(() => map.refresh(), 20);
 }));
 
-$('#listingList').innerHTML = '<div class="empty">HUG 주택 목록을 정리하고 있습니다.</div>';
+$('#listingList').innerHTML = '<div class="empty">HUG·LH 주택 목록을 정리하고 있습니다.</div>';
 loadData().catch((error) => { $('#listingList').innerHTML = `<div class="empty">${escapeHtml(error.message)}<br>터미널에서 npm run refresh를 실행해주세요.</div>`; });
