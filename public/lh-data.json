@@ -7,13 +7,13 @@
     "sourceFile": "2026년경기남부든든전세매입임대주택주택목록(2026.09.30).xlsx",
     "importedAt": "2026-10-15T02:44:09.5636818Z",
     "total": 227,
-    "located": 221,
+    "located": 222,
     "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
     "documentTargetAnnouncement": "2026.10.27. 17:00 이후",
     "winnerAnnouncement": "2026.12.02. 17:00 이후",
     "eligibility": "모집공고일(2026.09.30.) 현재 수도권에 거주하는 무주택세대구성원",
     "leasePeriod": "2년, 재계약 3회 가능(최장 8년)",
-    "geocodedAt": "2026-10-15T02:47:13.870Z"
+    "geocodedAt": "2026-10-15T02:48:38.734Z"
   },
   "listings": [
     {
@@ -261,8 +261,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.2720846,
-      "lng": 127.0550243
+      "lat": 37.2728448,
+      "lng": 127.04894
     },
     {
       "provider": "LH",
@@ -292,8 +292,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.2720846,
-      "lng": 127.0550243
+      "lat": 37.2728448,
+      "lng": 127.04894
     },
     {
       "provider": "LH",
@@ -323,8 +323,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2962192,
+      "lng": 127.0042731
     },
     {
       "provider": "LH",
@@ -354,8 +354,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2962192,
+      "lng": 127.0042731
     },
     {
       "provider": "LH",
@@ -385,8 +385,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2978682,
+      "lng": 127.0064505
     },
     {
       "provider": "LH",
@@ -416,8 +416,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2978682,
+      "lng": 127.0064505
     },
     {
       "provider": "LH",
@@ -447,8 +447,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2978682,
+      "lng": 127.0064505
     },
     {
       "provider": "LH",
@@ -478,8 +478,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2978682,
+      "lng": 127.0064505
     },
     {
       "provider": "LH",
@@ -509,8 +509,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3034861,
-      "lng": 127.0000083
+      "lat": 37.2978682,
+      "lng": 127.0064505
     },
     {
       "provider": "LH",
@@ -3485,8 +3485,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3070844,
-      "lng": 126.8454603
+      "lat": 37.3072112,
+      "lng": 126.8503374
     },
     {
       "provider": "LH",
@@ -3516,8 +3516,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3070844,
-      "lng": 126.8454603
+      "lat": 37.3072112,
+      "lng": 126.8503374
     },
     {
       "provider": "LH",
@@ -3547,8 +3547,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3070844,
-      "lng": 126.8454603
+      "lat": 37.3072112,
+      "lng": 126.8503374
     },
     {
       "provider": "LH",
@@ -3578,8 +3578,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.3070844,
-      "lng": 126.8454603
+      "lat": 37.3072112,
+      "lng": 126.8503374
     },
     {
       "provider": "LH",
@@ -4973,8 +4973,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": null,
-      "lng": null
+      "lat": 37.4037344,
+      "lng": 126.9136032
     },
     {
       "provider": "LH",
@@ -5810,8 +5810,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.2400128,
-      "lng": 127.2173535
+      "lat": 37.2312691,
+      "lng": 127.2148656
     },
     {
       "provider": "LH",
@@ -5841,8 +5841,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.2400128,
-      "lng": 127.2173535
+      "lat": 37.2312691,
+      "lng": 127.2148656
     },
     {
       "provider": "LH",
@@ -5872,8 +5872,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.2401563,
-      "lng": 127.2174794
+      "lat": 37.2878734,
+      "lng": 127.2141259
     },
     {
       "provider": "LH",
@@ -6523,8 +6523,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.4517752,
-      "lng": 126.7954628
+      "lat": 37.4517588,
+      "lng": 126.7954464
     },
     {
       "provider": "LH",
@@ -6554,8 +6554,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.4517752,
-      "lng": 126.7954628
+      "lat": 37.4517588,
+      "lng": 126.7954464
     },
     {
       "provider": "LH",
@@ -6585,8 +6585,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.4517752,
-      "lng": 126.7954628
+      "lat": 37.4517588,
+      "lng": 126.7954464
     },
     {
       "provider": "LH",
@@ -6616,8 +6616,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.4517752,
-      "lng": 126.7954628
+      "lat": 37.4517588,
+      "lng": 126.7954464
     },
     {
       "provider": "LH",
@@ -6647,8 +6647,8 @@
       "applicants": null,
       "applicationPeriod": "2026.10.21. 10:00 ~ 2026.10.23. 16:00",
       "detailUrl": "https://apply.lh.or.kr",
-      "lat": 37.4517752,
-      "lng": 126.7954628
+      "lat": 37.4517588,
+      "lng": 126.7954464
     },
     {
       "provider": "LH",
