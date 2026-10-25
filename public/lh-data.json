@@ -14,10 +14,10 @@
     "eligibility": "모집공고일(2026.09.30.) 현재 수도권에 거주하는 무주택세대구성원",
     "leasePeriod": "2년, 재계약 3회 가능(최장 8년)",
     "geocodedAt": "2026-10-15T02:51:11.933Z",
-    "evCheckedAt": "2026-10-15T02:55:09.774Z",
+    "evCheckedAt": "2026-10-25T20:54:22.833Z",
     "evRadiusM": 300,
     "evBuildings": 34,
-    "evMatches": 9
+    "evMatches": 10
   },
   "listings": [
     {
@@ -3700,7 +3700,14 @@
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
       "lng": 126.8503374,
-      "evCharger": null
+      "evCharger": {
+        "name": "신중앙주차장(안산) 전기차충전소",
+        "address": "경기도 안산시 상록구 중보로 17",
+        "lat": 37.3059645,
+        "lng": 126.8489827,
+        "distanceM": 183,
+        "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EC%A4%91%EC%95%99%EC%A3%BC%EC%B0%A8%EC%9E%A5(%EC%95%88%EC%82%B0)%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3732,7 +3739,14 @@
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
       "lng": 126.8503374,
-      "evCharger": null
+      "evCharger": {
+        "name": "신중앙주차장(안산) 전기차충전소",
+        "address": "경기도 안산시 상록구 중보로 17",
+        "lat": 37.3059645,
+        "lng": 126.8489827,
+        "distanceM": 183,
+        "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EC%A4%91%EC%95%99%EC%A3%BC%EC%B0%A8%EC%9E%A5(%EC%95%88%EC%82%B0)%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3764,7 +3778,14 @@
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
       "lng": 126.8503374,
-      "evCharger": null
+      "evCharger": {
+        "name": "신중앙주차장(안산) 전기차충전소",
+        "address": "경기도 안산시 상록구 중보로 17",
+        "lat": 37.3059645,
+        "lng": 126.8489827,
+        "distanceM": 183,
+        "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EC%A4%91%EC%95%99%EC%A3%BC%EC%B0%A8%EC%9E%A5(%EC%95%88%EC%82%B0)%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",
@@ -3796,7 +3817,14 @@
       "detailUrl": "https://apply.lh.or.kr",
       "lat": 37.3072112,
       "lng": 126.8503374,
-      "evCharger": null
+      "evCharger": {
+        "name": "신중앙주차장(안산) 전기차충전소",
+        "address": "경기도 안산시 상록구 중보로 17",
+        "lat": 37.3059645,
+        "lng": 126.8489827,
+        "distanceM": 183,
+        "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EC%A4%91%EC%95%99%EC%A3%BC%EC%B0%A8%EC%9E%A5(%EC%95%88%EC%82%B0)%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "provider": "LH",

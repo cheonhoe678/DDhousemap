@@ -13,10 +13,10 @@
     "applicantsFetchedAt": "2026-10-12T01:46:05.080Z",
     "applicantsChecked": 289,
     "applicantsNextPage": 31,
-    "evCheckedAt": "2026-10-15T02:55:09.773Z",
+    "evCheckedAt": "2026-10-25T20:54:22.833Z",
     "evRadiusM": 300,
     "evBuildings": 814,
-    "evMatches": 56
+    "evMatches": 57
   },
   "listings": [
     {
@@ -619,12 +619,12 @@
       "unit": "1동301",
       "round": 11,
       "evCharger": {
-        "name": "검단동 행정복지센터 전기차충전소",
-        "address": "인천광역시 검단구 검단로529번길 14",
-        "lat": 37.6050506,
-        "lng": 126.6617904,
-        "distanceM": 172,
-        "mapUrl": "https://map.naver.com/p/search/%EA%B2%80%EB%8B%A8%EB%8F%99%20%ED%96%89%EC%A0%95%EB%B3%B5%EC%A7%80%EC%84%BC%ED%84%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "서구청 검단출장소 전기차충전소",
+        "address": "인천광역시 검단구 검단로502번길 15",
+        "lat": 37.6020407,
+        "lng": 126.6614441,
+        "distanceM": 246,
+        "mapUrl": "https://map.naver.com/p/search/%EC%84%9C%EA%B5%AC%EC%B2%AD%20%EA%B2%80%EB%8B%A8%EC%B6%9C%EC%9E%A5%EC%86%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -721,12 +721,12 @@
       "unit": "504",
       "round": 11,
       "evCharger": {
-        "name": "한국건강관리협회 인천지부 전기차충전소",
-        "address": "인천광역시 남동구 인주대로 556",
-        "lat": 37.449787,
-        "lng": 126.698601,
-        "distanceM": 207,
-        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EA%B5%AD%EA%B1%B4%EA%B0%95%EA%B4%80%EB%A6%AC%ED%98%91%ED%9A%8C%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EB%B6%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "삼성빌딩 앞 주차장 전기차충전소",
+        "address": "인천광역시 남동구 구월동 1337",
+        "lat": 37.4511293,
+        "lng": 126.6996865,
+        "distanceM": 112,
+        "mapUrl": "https://map.naver.com/p/search/%EC%82%BC%EC%84%B1%EB%B9%8C%EB%94%A9%20%EC%95%9E%20%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -1270,12 +1270,12 @@
       "unit": "405",
       "round": 11,
       "evCharger": {
-        "name": "부천대학교(본교) 충전소 전기차충전소",
-        "address": "경기도 부천시 원미구 신흥로56번길 25",
-        "lat": 37.4888727,
-        "lng": 126.7792998,
-        "distanceM": 247,
-        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90(%EB%B3%B8%EA%B5%90)%20%EC%B6%A9%EC%A0%84%EC%86%8C%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "부천 삼융아파트 전기차충전소",
+        "address": "경기도 부천시 원미구 신흥로16번길 27 삼융아파트 오피스텔",
+        "lat": 37.4849107,
+        "lng": 126.7785188,
+        "distanceM": 231,
+        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%EC%B2%9C%20%EC%82%BC%EC%9C%B5%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -4758,12 +4758,12 @@
       "unit": "203",
       "round": 11,
       "evCharger": {
-        "name": "곰달래5길 노상공영주차장 전기차충전소",
-        "address": "서울특별시 양천구 신월동 804",
-        "lat": 37.5310591,
-        "lng": 126.833992,
-        "distanceM": 245,
-        "mapUrl": "https://map.naver.com/p/search/%EA%B3%B0%EB%8B%AC%EB%9E%985%EA%B8%B8%20%EB%85%B8%EC%83%81%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "신월 스위트드림아파트 도로옆 지상공영주차장 전기차충전소",
+        "address": "서울특별시 양천구 곰달래로11길 56",
+        "lat": 37.5346833,
+        "lng": 126.8346089,
+        "distanceM": 167,
+        "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EC%9B%94%20%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%93%9C%EB%A6%BC%EC%95%84%ED%8C%8C%ED%8A%B8%20%EB%8F%84%EB%A1%9C%EC%98%86%20%EC%A7%80%EC%83%81%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -9173,12 +9173,12 @@
       "buildingName": "그레이스빌",
       "unit": "2동501호",
       "evCharger": {
-        "name": "일신주공아파트 차지비 전기차충전소",
-        "address": "인천광역시 부평구 항동로75번길 11",
-        "lat": 37.4827007,
-        "lng": 126.7414811,
-        "distanceM": 165,
-        "mapUrl": "https://map.naver.com/p/search/%EC%9D%BC%EC%8B%A0%EC%A3%BC%EA%B3%B5%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%B0%A8%EC%A7%80%EB%B9%84%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "일신풍림아파트 차지비 2 전기차충전소",
+        "address": "인천광역시 부평구 일신로14번길 23",
+        "lat": 37.4821771,
+        "lng": 126.7440146,
+        "distanceM": 114,
+        "mapUrl": "https://map.naver.com/p/search/%EC%9D%BC%EC%8B%A0%ED%92%8D%EB%A6%BC%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%B0%A8%EC%A7%80%EB%B9%84%202%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -12156,12 +12156,12 @@
       "buildingName": "벨라루체",
       "unit": "206호",
       "evCharger": {
-        "name": "베가호텔 전기차충전소",
-        "address": "인천광역시 부평구 경원대로1431번길 37",
-        "lat": 37.4926157,
-        "lng": 126.7271131,
-        "distanceM": 299,
-        "mapUrl": "https://map.naver.com/p/search/%EB%B2%A0%EA%B0%80%ED%98%B8%ED%85%94%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "인천원예농협 전기차충전소",
+        "address": "인천광역시 부평구 시장로 48",
+        "lat": 37.4947125,
+        "lng": 126.72725,
+        "distanceM": 219,
+        "mapUrl": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EC%9B%90%EC%98%88%EB%86%8D%ED%98%91%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -13488,12 +13488,12 @@
       "buildingName": "벨라루체",
       "unit": "1106호",
       "evCharger": {
-        "name": "베가호텔 전기차충전소",
-        "address": "인천광역시 부평구 경원대로1431번길 37",
-        "lat": 37.4926157,
-        "lng": 126.7271131,
-        "distanceM": 299,
-        "mapUrl": "https://map.naver.com/p/search/%EB%B2%A0%EA%B0%80%ED%98%B8%ED%85%94%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "인천원예농협 전기차충전소",
+        "address": "인천광역시 부평구 시장로 48",
+        "lat": 37.4947125,
+        "lng": 126.72725,
+        "distanceM": 219,
+        "mapUrl": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EC%9B%90%EC%98%88%EB%86%8D%ED%98%91%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -17304,7 +17304,14 @@
       "lng": 126.7312331,
       "buildingName": "블루밍아파트",
       "unit": "비동407호",
-      "evCharger": null
+      "evCharger": {
+        "name": "부평SKVIEW(sk뷰)해모로아파트 전기차충전소",
+        "address": "인천광역시 부평구 동수천로 71",
+        "lat": 37.4920223,
+        "lng": 126.7336911,
+        "distanceM": 223,
+        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%ED%8F%89SKVIEW(sk%EB%B7%B0)%ED%95%B4%EB%AA%A8%EB%A1%9C%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 433,
@@ -17832,7 +17839,14 @@
       "lng": 126.7312331,
       "buildingName": "블루밍아파트",
       "unit": "비동707호",
-      "evCharger": null
+      "evCharger": {
+        "name": "부평SKVIEW(sk뷰)해모로아파트 전기차충전소",
+        "address": "인천광역시 부평구 동수천로 71",
+        "lat": 37.4920223,
+        "lng": 126.7336911,
+        "distanceM": 223,
+        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%ED%8F%89SKVIEW(sk%EB%B7%B0)%ED%95%B4%EB%AA%A8%EB%A1%9C%EC%95%84%ED%8C%8C%ED%8A%B8%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 409,
@@ -20220,12 +20234,12 @@
       "buildingName": "현대렉스힐",
       "unit": "401호",
       "evCharger": {
-        "name": "제니스호텔부평역 전기차충전소",
-        "address": "인천광역시 부평구 경원대로 1427-1",
-        "lat": 37.4915389,
-        "lng": 126.7276591,
-        "distanceM": 291,
-        "mapUrl": "https://map.naver.com/p/search/%EC%A0%9C%EB%8B%88%EC%8A%A4%ED%98%B8%ED%85%94%EB%B6%80%ED%8F%89%EC%97%AD%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "부평 현대 더로프트 전기차충전소",
+        "address": "인천광역시 부평구 장제로 45",
+        "lat": 37.489591,
+        "lng": 126.728452,
+        "distanceM": 125,
+        "mapUrl": "https://map.naver.com/p/search/%EB%B6%80%ED%8F%89%20%ED%98%84%EB%8C%80%20%EB%8D%94%EB%A1%9C%ED%94%84%ED%8A%B8%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -20931,12 +20945,12 @@
       "buildingName": "에코빌리지",
       "unit": "102동501호",
       "evCharger": {
-        "name": "경창시장 고객주차장 전기차충전소",
-        "address": "서울특별시 양천구 월정로 46",
-        "lat": 37.5238581,
-        "lng": 126.8423934,
-        "distanceM": 249,
-        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EC%B0%BD%EC%8B%9C%EC%9E%A5%20%EA%B3%A0%EA%B0%9D%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "서울시 양천구 장수마을동원데자뷰 전기차충전소",
+        "address": "서울특별시 양천구 오목로 76-2",
+        "lat": 37.5220365,
+        "lng": 126.8454817,
+        "distanceM": 148,
+        "mapUrl": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%EC%9E%A5%EC%88%98%EB%A7%88%EC%9D%84%EB%8F%99%EC%9B%90%EB%8D%B0%EC%9E%90%EB%B7%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -21744,12 +21758,12 @@
       "buildingName": "에코빌리지",
       "unit": "101동501호",
       "evCharger": {
-        "name": "경창시장 고객주차장 전기차충전소",
-        "address": "서울특별시 양천구 월정로 46",
-        "lat": 37.5238581,
-        "lng": 126.8423934,
-        "distanceM": 249,
-        "mapUrl": "https://map.naver.com/p/search/%EA%B2%BD%EC%B0%BD%EC%8B%9C%EC%9E%A5%20%EA%B3%A0%EA%B0%9D%EC%A3%BC%EC%B0%A8%EC%9E%A5%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+        "name": "서울시 양천구 장수마을동원데자뷰 전기차충전소",
+        "address": "서울특별시 양천구 오목로 76-2",
+        "lat": 37.5220365,
+        "lng": 126.8454817,
+        "distanceM": 148,
+        "mapUrl": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%EC%9E%A5%EC%88%98%EB%A7%88%EC%9D%84%EB%8F%99%EC%9B%90%EB%8D%B0%EC%9E%90%EB%B7%B0%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
       }
     },
     {
@@ -22989,7 +23003,14 @@
       "lng": 126.7918892,
       "buildingName": "스타팰리스",
       "unit": "110동302호",
-      "evCharger": null
+      "evCharger": {
+        "name": "오푸스하임(오르비제빌리지 ) 전기차충전소",
+        "address": "경기도 고양시 일산동구 애니골길 15-46",
+        "lat": 37.6715156,
+        "lng": 126.7897613,
+        "distanceM": 187,
+        "mapUrl": "https://map.naver.com/p/search/%EC%98%A4%ED%91%B8%EC%8A%A4%ED%95%98%EC%9E%84(%EC%98%A4%EB%A5%B4%EB%B9%84%EC%A0%9C%EB%B9%8C%EB%A6%AC%EC%A7%80%20)%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
+      }
     },
     {
       "rowNumber": 180,
@@ -25691,14 +25712,7 @@
       "lng": 126.6987514,
       "buildingName": "아트리움",
       "unit": "601호",
-      "evCharger": {
-        "name": "한국건강관리협회 인천지부 전기차충전소",
-        "address": "인천광역시 남동구 인주대로 556",
-        "lat": 37.449787,
-        "lng": 126.698601,
-        "distanceM": 78,
-        "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EA%B5%AD%EA%B1%B4%EA%B0%95%EA%B4%80%EB%A6%AC%ED%98%91%ED%9A%8C%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EB%B6%80%20%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84%EC%86%8C"
-      }
+      "evCharger": null
     },
     {
       "rowNumber": 61,
